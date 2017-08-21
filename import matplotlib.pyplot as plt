@@ -1,0 +1,37 @@
+import matplotlib.pyplot as plt
+
+f = open("out.txt")
+point = []
+line = f.readline()
+x_p = []
+y_p = []
+while line:
+    # print line,
+    line = line.strip()
+    p = line.rfind(' ')
+    print line[0:p], line[p+1:]
+    print type(line)
+    # x = float(line[0:p])
+    # y = float(line[p+1:])
+    # print x, y
+    # x_p.append(x)
+    # y_p.append(y)
+    point.append(line)
+    line = f.readline()
+
+f.close()
+# print point
+# print type(point)
+# for p in point:
+#     print p
+# print x_p
+# print y_p
+
+
+
+# fig = plt.figure()
+# ax1 = fig.add_subplot(111)
+# ax1.set_title('Scatter Plot')
+# plt.xlabel('X')
+# plt.ylabel('Y')
+
