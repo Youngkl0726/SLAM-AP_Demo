@@ -59,7 +59,7 @@ def get_ap_info(filename):
 
 # visulize camera trajectory, MapPoints in pictures and AP boxes of cars
 def draw_points(x_p, y_p, slam_pic_pos, slam_3d_pos, ap_pos):
-    sleep_t = 0.1
+    sleep_t = 0.001
     for i in range(1801):
         pic_x = []
         pic_y = []
@@ -81,7 +81,7 @@ def draw_points(x_p, y_p, slam_pic_pos, slam_3d_pos, ap_pos):
 
         slam_len = len(point_x)
 
-        color = ['black', 'red', 'yellow', 'pink', 'brown', 'chocolate', 'darkorange', 'burlywood', 'cyan',
+        color = ['red', 'yellow', 'pink', 'brown', 'chocolate', 'darkorange', 'burlywood', 'cyan',
                  'deepskyblue', 'royalblue', 'violet', 'purple', 'green']
         # print len(color)
         fig1 = plt.figure(1)
@@ -104,7 +104,7 @@ def draw_points(x_p, y_p, slam_pic_pos, slam_3d_pos, ap_pos):
                 for j in range(slam_len):
                     x = pic_x[j]
                     y = pic_y[j]
-                    if x-left>0.0000001 and right-x<0.0000001 and y-top>0.0000001 and bottom-y>0.0000001:
+                    if x-left>0.0000001 and right-x>0.0000001 and y-top>0.0000001 and bottom-y>0.0000001:
                         # map_point_x.append(point_x[j])
                         # map_point_y.append(point_y[j])
                         # break
@@ -149,7 +149,7 @@ def draw_points(x_p, y_p, slam_pic_pos, slam_3d_pos, ap_pos):
             ap_right.append(right)
             ap_bottom.append(bottom)
         ap_len = len(ap_top)
-
+        color_id = 0
         for k in range(ap_len):
             left = ap_left[k]
             top = ap_top[k]
@@ -160,11 +160,13 @@ def draw_points(x_p, y_p, slam_pic_pos, slam_3d_pos, ap_pos):
             for j in range(slam_len):
                 x = pic_x[j]
                 y = pic_y[j]
-                if x-left>0.0000001 and right-x<0.0000001 and y-top>0.0000001 and bottom-y>0.0000001:
+                if x-left>0.0000001 and right-x>0.0000001 and y-top>0.0000001 and bottom-y>0.0000001:
                     cor_x.append(x)
                     cor_y.append(y)
+
             if len(cor_x) != 0:
-                plt.scatter(x=cor_x[:], y=cor_y[:], c=color[k], marker='o')
+                color_id += 1
+                plt.scatter(x=cor_x[:], y=cor_y[:], c=color[color_id], marker='o')
             p1 = []
             p2 = []
             p3 = []
