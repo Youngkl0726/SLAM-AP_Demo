@@ -57,7 +57,7 @@ def get_ap_info(filename):
     ap_file.close()
     return ap_pos
 
-# visulize camera trajectory, MapPoints in pictures and AP boxes of cars
+# visualize camera trajectory, MapPoints in pictures and AP boxes of cars
 def draw_points(x_p, y_p, slam_pic_pos, slam_3d_pos, ap_pos):
     sleep_t = 0.001
     for i in range(1801):
@@ -87,8 +87,8 @@ def draw_points(x_p, y_p, slam_pic_pos, slam_3d_pos, ap_pos):
         fig1 = plt.figure(1)
         plt.pause(sleep_t)
         plt.clf()
-        plt.axis([-100, 300, 180, 400], c='black')
-        plt.plot(x_p[0:i], y_p[0:i])
+        plt.axis([-100, 300, 0, 400])
+        plt.plot(x_p[0:i], y_p[0:i], c='black')
         if len(ap_pos[i]) != 0:
             map_point_x = []
             map_point_y = []
