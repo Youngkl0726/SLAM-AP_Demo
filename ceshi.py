@@ -74,7 +74,6 @@ def draw_points(x_p, y_p, slam_pic_pos, slam_3d_pos, ap_pos):
     color = ['red', 'black', 'brown', 'darkorange', 'darkmagenta', 'teal',
              'deepskyblue', 'royalblue', 'violet', 'purple', 'green', 'chocolate']
     cars = []
-
     color_id = 0
     for i in range(1801):
         pic_x = []
@@ -152,8 +151,12 @@ def draw_points(x_p, y_p, slam_pic_pos, slam_3d_pos, ap_pos):
                 new_car = Cars(color_id, car_id, total_x / cnt, total_y / cnt)
                 plt.scatter(x=new_car.cor_x[0:], y=new_car.cor_y[0:], c=color[new_car.color], marker='o')
                 cars.append(new_car)
+                if i > 295 and i < 310:
+                    print "color1 is : ", color_id
                 color_id += 1
-                color_id = color_id % 13
+                color_id = color_id % 12
+                if i > 295 and i < 310:
+                    print "color2 is : ", color_id
 
         if i > 295 and i < 310:
             print "i is: ", i
@@ -204,7 +207,7 @@ def draw_points(x_p, y_p, slam_pic_pos, slam_3d_pos, ap_pos):
             ap_right.append(right)
             ap_bottom.append(bottom)
         ap_len = len(ap_top)
-        color_id = 0
+        color_id2 = 0
         for k in range(ap_len):
             left = ap_left[k]
             top = ap_top[k]
@@ -220,8 +223,9 @@ def draw_points(x_p, y_p, slam_pic_pos, slam_3d_pos, ap_pos):
                     cor_y.append(y)
 
             if len(cor_x) != 0:
-                color_id += 1
-                plt.scatter(x=cor_x[:], y=cor_y[:], c=color[color_id], marker='o')
+                color_id2 += 1
+                color_id2 = color_id2 % 12
+                plt.scatter(x=cor_x[:], y=cor_y[:], c=color[color_id2], marker='o')
             p1 = []
             p2 = []
             p3 = []
