@@ -2,7 +2,7 @@ import matplotlib.pyplot as plt
 import matplotlib.image as mpimg
 from os import path
 
-class Cars():
+class Cars:
 
     def __init__(self, color, index, x, y):
         self.cor_x = []
@@ -71,8 +71,8 @@ def get_ap_info(filename):
 # Visualize camera trajectory, MapPoints in pictures and AP boxes of cars
 def draw_points(x_p, y_p, slam_pic_pos, slam_3d_pos, ap_pos):
     sleep_t = 0.001
-    color = ['red', 'black', 'pink', 'brown', 'chocolate', 'darkorange', 'burlywood', 'cyan',
-             'deepskyblue', 'royalblue', 'violet', 'purple', 'green']
+    color = ['red', 'black', 'brown', 'darkorange', 'darkmagenta', 'teal',
+             'deepskyblue', 'royalblue', 'violet', 'purple', 'green', 'chocolate']
     cars = []
 
     color_id = 0
@@ -100,89 +100,83 @@ def draw_points(x_p, y_p, slam_pic_pos, slam_3d_pos, ap_pos):
         fig1 = plt.figure(1)
         plt.pause(sleep_t)
         plt.clf()
-        plt.axis([-100, 300, 0, 400])
+        plt.axis([-100, 300, 0, 500])
         plt.plot(x_p[0:i], y_p[0:i])
-        if len(ap_pos[i]) != 0:
-            map_point_x = []
-            map_point_y = []
-            existing_ids = []
-            for line in (ap_pos[i]):
-                if i > 295 and i < 310:
-                    print "iii : ", i, "line is : ", line
-                line = line.split(' ')
-                car_id = int(line[0])
-                existing_ids.append(car_id)
-                left = float(line[1])
-                top = float(line[2])
-                right = float(line[3])
-                bottom = float(line[4])
+        existing_ids = []
+        for line in (ap_pos[i]):
+            if i > 295 and i < 310:
+                print "iii : ", i, "line is : ", line
+            line = line.split(' ')
+            car_id = int(line[0])
+            existing_ids.append(car_id)
+            left = float(line[1])
+            top = float(line[2])
+            right = float(line[3])
+            bottom = float(line[4])
 
-                cnt = 0.0
-                total_x = 0.0
-                total_y = 0.0
-                for j in range(slam_len):
-                    x = pic_x[j]
-                    y = pic_y[j]
-                    if x - left > 0.0000001 and right - x > 0.0000001 and y - top > 0.0000001 and bottom - y > 0.0000001:
-                        total_x += point_x[j]
-                        total_y += point_y[j]
-                        cnt += 1.0
-                if i > 295 and i < 310:
-                    print "cnt is : ", cnt
-                if cnt == 0.0:
-                    continue
-
-                flag = 0
-
+            cnt = 0.0
+            total_x = 0.0
+            total_y = 0.0
+            for j in range(slam_len):
+                x = pic_x[j]
+                y = pic_y[j]
+                if x - left > 0.0000001 and right - x > 0.0000001 and y - top > 0.0000001 and bottom - y > 0.0000001:
+                    total_x += point_x[j]
+                    total_y += point_y[j]
+                    cnt += 1.0
+            if i > 295 and i < 310:
+                print "cnt is : ", cnt
+            if cnt == 0.0:
                 for m in cars:
-                    index = m.index
-                    if i > 295 and i < 310:
-                        print "index is: ", index, "car_id is: ", car_id
-                    if index == car_id:
-                        flag = 1
-                        m.cor_x.append(total_x/cnt)
-                        m.cor_y.append(total_y/cnt)
+                    if m.index == car_id:
                         plt.plot(m.cor_x[0:], m.cor_y[0:], c=color[m.color])
-                        break
-                        # print m.cor_x[0:], m.cor_y[0:], m.color
-                if i > 295 and i < 310:
-                    print "i is : ", i, "flag is : ", flag
-                if flag == 0:
-                    if i>295 and i<310:
-                        print "i is: ", i, car_id
-                    new_car = Cars(color_id, car_id, total_x/cnt, total_y/cnt)
-                    plt.scatter(x=new_car.cor_x[0:], y=new_car.cor_y[0:], c=color[new_car.color], marker='o')
-                    # print new_car.cor_x[0:], new_car.cor_y[0:], new_car.color
-                    cars.append(new_car)
-                    color_id += 1
-                    color_id = color_id % 13
+                continue
 
-            if i > 295 and i < 310:
-                print "i is: ", i
-                print "existing ids are: ", existing_ids
-                for m in cars:
-                    print m.index,
-                print ""
+            flag = 0
 
-            # if i > 295 and i < 310:
-            #     print "cars size: ",
-            #     print len(cars)
             for m in cars:
-                flag = 0
-                for n in existing_ids:
-                    if n == m.index:
-                        flag = 1
-                if flag == 0:
-                    cars.remove(m)
-
+                index = m.index
+                if i > 295 and i < 310:
+                    print "index is: ", index, "car_id is: ", car_id
+                if index == car_id:
+                    flag = 1
+                    m.cor_x.append(total_x / cnt)
+                    m.cor_y.append(total_y / cnt)
+                    plt.plot(m.cor_x[0:], m.cor_y[0:], c=color[m.color])
+                    break
             if i > 295 and i < 310:
-                print "i is: ", i
-                print "existing ids are: ", existing_ids
-                for m in cars:
-                    print m.index,
-                print ""
+                print "i is : ", i, "flag is : ", flag
+            if flag == 0:
+                if i > 295 and i < 310:
+                    print "i is: ", i, car_id
+                new_car = Cars(color_id, car_id, total_x / cnt, total_y / cnt)
+                plt.scatter(x=new_car.cor_x[0:], y=new_car.cor_y[0:], c=color[new_car.color], marker='o')
+                cars.append(new_car)
+                color_id += 1
+                color_id = color_id % 13
+
+        if i > 295 and i < 310:
+            print "i is: ", i
+            print "existing ids are: ", existing_ids
+            for m in cars:
+                print m.index,
+            print ""
+
+        for m in cars:
+            flag = 0
+            for n in existing_ids:
+                if n == m.index:
+                    flag = 1
+            if flag == 0:
+                cars.remove(m)
+
+        if i > 295 and i < 310:
+            print "i is: ", i
+            print "existing ids are: ", existing_ids
+            for m in cars:
+                print m.index,
+            print ""
             # print len(cars)
-        # plt.scatter(x=point_x[0:], y=point_y[0:], c='r', marker='o')
 
         fig2 = plt.figure(2)
         plt.axis([0, 1250, 350, 0])
