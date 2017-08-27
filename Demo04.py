@@ -18,7 +18,7 @@ def get_camera_traj(filename):
     camera_file = open(filename)
     x_p = []
     y_p = []
-    for i in range(1801):
+    for i in range(271):
         camera_line = camera_file.readline()
         camera_line = camera_line.strip()
         camera_line = camera_line.split(" ")
@@ -32,10 +32,10 @@ def get_camera_traj(filename):
 # get the coordinates of MapPoints in the picture and 3D world coordinate
 def get_slam_info(filename):
     slam = open(filename)
-    slam_3d_pos = [[] for i in range(1801)]
-    slam_pic_pos = [[] for i in range(1801)]
+    slam_3d_pos = [[] for i in range(271)]
+    slam_pic_pos = [[] for i in range(271)]
     slam_num = -1
-    for i in range(414764):
+    for i in range(92725):
         slam_line = slam.readline()
         slam_line = slam_line.strip()
         # print slam_line
@@ -56,8 +56,8 @@ def get_slam_info(filename):
 def get_ap_info(filename):
     ap_file = open(filename)
     ap_num = -1
-    ap_pos = [[] for i in range(1801)]
-    for i in range(9538):
+    ap_pos = [[] for i in range(271)]
+    for i in range(787):
         ap_line = ap_file.readline()
         ap_line = ap_line.strip()
         if ap_line[0] == 's':
@@ -75,7 +75,7 @@ def draw_points(x_p, y_p, slam_pic_pos, slam_3d_pos, ap_pos):
              'deepskyblue', 'royalblue', 'violet', 'purple', 'green', 'chocolate']
     cars = []
     color_id = 0
-    for i in range(1801):
+    for i in range(271):
         pic_x = []
         pic_y = []
         for line in (slam_pic_pos[i]):
@@ -186,7 +186,7 @@ def draw_points(x_p, y_p, slam_pic_pos, slam_3d_pos, ap_pos):
         plt.pause(sleep_t)
         plt.clf()
 
-        file_dir = '/Users/youngkl/Desktop/Demo/image_0/'
+        file_dir = '/Users/youngkl/Desktop/Demo/Demo04/image_0/'
         image_name = '{:0>6d}.png'.format(i)
         img = mpimg.imread(path.join(file_dir, image_name))
         plt.imshow(img, cmap='gray')
@@ -246,9 +246,9 @@ def draw_points(x_p, y_p, slam_pic_pos, slam_3d_pos, ap_pos):
     plt.show()
 
 def main():
-    camera_file = r'CameraTrajectory.txt'
-    slam2 = r'slam_out2.txt'
-    ap_file = r'ap_out2.txt'
+    camera_file = r'./Demo04/CameraTrajectory.txt'
+    slam2 = r'./Demo04/slam_out2.txt'
+    ap_file = r'./Demo04/ap_out2.txt'
     camera_x, camera_y = get_camera_traj(camera_file)
     print len(camera_x)
     slam_pic_pos, slam_3d_pos = get_slam_info(slam2)
