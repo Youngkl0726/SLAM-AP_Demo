@@ -247,8 +247,8 @@ def draw_points(x_p, y_p, slam_pic_pos, slam_3d_pos, ap_pos):
 
 def main():
     camera_file = r'./Demo04/CameraTrajectory.txt'
-    slam2 = r'./Demo04/slam_out2.txt'
-    ap_file = r'./Demo04/ap_out2.txt'
+    slam2 = r'./Demo04/slamout04.txt'
+    ap_file = r'./Demo04/ap04.txt'
     camera_x, camera_y = get_camera_traj(camera_file)
     print len(camera_x)
     slam_pic_pos, slam_3d_pos = get_slam_info(slam2)
