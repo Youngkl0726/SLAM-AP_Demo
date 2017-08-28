@@ -2,6 +2,17 @@ import matplotlib.pyplot as plt
 import matplotlib.image as mpimg
 from os import path
 
+class Cars:
+
+    def __init__(self, color, index, x, y):
+        self.cor_x = []
+        self.cor_y = []
+        self.color = color
+        self.index = index
+        self.cor_x.append(x)
+        self.cor_y.append(y)
+
+
 # get camera trajectory
 def get_camera_traj(filename):
     camera_file = open(filename)
@@ -57,9 +68,13 @@ def get_ap_info(filename):
     ap_file.close()
     return ap_pos
 
-# visualize camera trajectory, MapPoints in pictures and AP boxes of cars
+# Visualize camera trajectory, MapPoints in pictures and AP boxes of cars
 def draw_points(x_p, y_p, slam_pic_pos, slam_3d_pos, ap_pos):
     sleep_t = 0.001
+    color = ['red', 'black', 'brown', 'darkorange', 'darkmagenta', 'teal',
+             'deepskyblue', 'royalblue', 'violet', 'purple', 'green', 'chocolate']
+    cars = []
+    color_id = 0
     for i in range(1801):
         pic_x = []
         pic_y = []
@@ -81,47 +96,90 @@ def draw_points(x_p, y_p, slam_pic_pos, slam_3d_pos, ap_pos):
 
         slam_len = len(point_x)
 
-        color = ['red', 'yellow', 'pink', 'brown', 'chocolate', 'darkorange', 'burlywood', 'cyan',
-                 'deepskyblue', 'royalblue', 'violet', 'purple', 'green']
-        # print len(color)
         fig1 = plt.figure(1)
         plt.pause(sleep_t)
         plt.clf()
-        plt.axis([-100, 300, 0, 400])
-        plt.plot(x_p[0:i], y_p[0:i], c='black')
-        if len(ap_pos[i]) != 0:
-            map_point_x = []
-            map_point_y = []
-            for line in (ap_pos[i]):
-                line = line.split(' ')
-                left = float(line[0])
-                top = float(line[1])
-                right = float(line[2])
-                bottom = float(line[3])
-                cnt = 0.0
-                total_x = 0.0
-                total_y = 0.0
-                for j in range(slam_len):
-                    x = pic_x[j]
-                    y = pic_y[j]
-                    if x-left>0.0000001 and right-x>0.0000001 and y-top>0.0000001 and bottom-y>0.0000001:
-                        # map_point_x.append(point_x[j])
-                        # map_point_y.append(point_y[j])
-                        # break
-                        total_x += point_x[j]
-                        total_y += point_y[j]
-                        cnt += 1.0
+        plt.axis([-100, 300, 0, 500])
+        plt.plot(x_p[0:i], y_p[0:i])
+        existing_ids = []
+        for line in (ap_pos[i]):
+            if i > 295 and i < 310:
+                print "iii : ", i, "line is : ", line
+            line = line.split(' ')
+            car_id = int(line[0])
+            existing_ids.append(car_id)
+            left = float(line[1])
+            top = float(line[2])
+            right = float(line[3])
+            bottom = float(line[4])
 
-                # print cnt
-                if cnt == 0.0:
-                    continue
-                map_point_x.append(total_x/cnt)
-                map_point_y.append(total_y/cnt)
-            # print len(map_point_x)
-            for j in range(len(map_point_x)):
-                print map_point_x[j], map_point_y[j]
-                plt.scatter(x=map_point_x[j], y=map_point_y[j], c=color[j], marker='o')
-        # plt.scatter(x=point_x[0:], y=point_y[0:], c='r', marker='o')
+            cnt = 0.0
+            total_x = 0.0
+            total_y = 0.0
+            for j in range(slam_len):
+                x = pic_x[j]
+                y = pic_y[j]
+                if x - left > 0.0000001 and right - x > 0.0000001 and y - top > 0.0000001 and bottom - y > 0.0000001:
+                    total_x += point_x[j]
+                    total_y += point_y[j]
+                    cnt += 1.0
+            if i > 295 and i < 310:
+                print "cnt is : ", cnt
+            if cnt == 0.0:
+                for m in cars:
+                    if m.index == car_id:
+                        plt.plot(m.cor_x[0:], m.cor_y[0:], c=color[m.color])
+                continue
+
+            flag = 0
+
+            for m in cars:
+                index = m.index
+                if i > 295 and i < 310:
+                    print "index is: ", index, "car_id is: ", car_id
+                if index == car_id:
+                    flag = 1
+                    m.cor_x.append(total_x / cnt)
+                    m.cor_y.append(total_y / cnt)
+                    plt.plot(m.cor_x[0:], m.cor_y[0:], c=color[m.color])
+                    break
+            if i > 295 and i < 310:
+                print "i is : ", i, "flag is : ", flag
+            if flag == 0:
+                if i > 295 and i < 310:
+                    print "i is: ", i, car_id
+                new_car = Cars(color_id, car_id, total_x / cnt, total_y / cnt)
+                plt.scatter(x=new_car.cor_x[0:], y=new_car.cor_y[0:], c=color[new_car.color], marker='o')
+                cars.append(new_car)
+                if i > 295 and i < 310:
+                    print "color1 is : ", color_id
+                color_id += 1
+                color_id = color_id % 12
+                if i > 295 and i < 310:
+                    print "color2 is : ", color_id
+
+        if i > 295 and i < 310:
+            print "i is: ", i
+            print "existing ids are: ", existing_ids
+            for m in cars:
+                print m.index,
+            print ""
+
+        for m in cars:
+            flag = 0
+            for n in existing_ids:
+                if n == m.index:
+                    flag = 1
+            if flag == 0:
+                cars.remove(m)
+
+        if i > 295 and i < 310:
+            print "i is: ", i
+            print "existing ids are: ", existing_ids
+            for m in cars:
+                print m.index,
+            print ""
+            # print len(cars)
 
         fig2 = plt.figure(2)
         plt.axis([0, 1250, 350, 0])
@@ -140,16 +198,16 @@ def draw_points(x_p, y_p, slam_pic_pos, slam_3d_pos, ap_pos):
         ap_bottom = []
         for line in (ap_pos[i]):
             line = line.split(' ')
-            left = float(line[0])
-            top = float(line[1])
-            right = float(line[2])
-            bottom = float(line[3])
+            left = float(line[1])
+            top = float(line[2])
+            right = float(line[3])
+            bottom = float(line[4])
             ap_left.append(left)
             ap_top.append(top)
             ap_right.append(right)
             ap_bottom.append(bottom)
         ap_len = len(ap_top)
-        color_id = 0
+        color_id2 = 0
         for k in range(ap_len):
             left = ap_left[k]
             top = ap_top[k]
@@ -160,13 +218,14 @@ def draw_points(x_p, y_p, slam_pic_pos, slam_3d_pos, ap_pos):
             for j in range(slam_len):
                 x = pic_x[j]
                 y = pic_y[j]
-                if x-left>0.0000001 and right-x>0.0000001 and y-top>0.0000001 and bottom-y>0.0000001:
+                if x-left > 0.0000001 and right-x > 0.0000001 and y-top > 0.0000001 and bottom-y > 0.0000001:
                     cor_x.append(x)
                     cor_y.append(y)
 
             if len(cor_x) != 0:
-                color_id += 1
-                plt.scatter(x=cor_x[:], y=cor_y[:], c=color[color_id], marker='o')
+                color_id2 += 1
+                color_id2 = color_id2 % 12
+                plt.scatter(x=cor_x[:], y=cor_y[:], c=color[color_id2], marker='o')
             p1 = []
             p2 = []
             p3 = []
@@ -189,7 +248,7 @@ def draw_points(x_p, y_p, slam_pic_pos, slam_3d_pos, ap_pos):
 def main():
     camera_file = r'CameraTrajectory.txt'
     slam2 = r'slam_out2.txt'
-    ap_file = r'ap_out.txt'
+    ap_file = r'ap_out2.txt'
     camera_x, camera_y = get_camera_traj(camera_file)
     print len(camera_x)
     slam_pic_pos, slam_3d_pos = get_slam_info(slam2)
