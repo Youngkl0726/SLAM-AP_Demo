@@ -186,7 +186,7 @@ def draw_points(x_p, y_p, slam_pic_pos, slam_3d_pos, ap_pos):
         plt.pause(sleep_t)
         plt.clf()
 
-        file_dir = '/Users/youngkl/Desktop/Demo/Demo00/image_0/'
+        file_dir = '/Users/youngkl/Desktop/Demo/Demo18/image_0/'
         image_name = '{:0>6d}.png'.format(i)
         img = mpimg.imread(path.join(file_dir, image_name))
         plt.imshow(img, cmap='gray')
@@ -246,9 +246,9 @@ def draw_points(x_p, y_p, slam_pic_pos, slam_3d_pos, ap_pos):
     plt.show()
 
 def main():
-    camera_file = r'./Demo00/CameraTrajectory.txt'
-    slam2 = r'./Demo00/slam_out2.txt'
-    ap_file = r'./Demo00/ap_out2.txt'
+    camera_file = r'./Demo18/CameraTrajectory.txt'
+    slam2 = r'./Demo18/slam_out2.txt'
+    ap_file = r'./Demo18/ap_out2.txt'
     camera_x, camera_y = get_camera_traj(camera_file)
     print len(camera_x)
     slam_pic_pos, slam_3d_pos = get_slam_info(slam2)
