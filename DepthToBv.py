@@ -74,7 +74,7 @@ camera_file = r'./Demo04/CameraTrajectory.txt'
 camera_traj, camera_x, camera_y = get_camera_traj(camera_file)
 ap_file = r'./Demo04/ap04.txt'
 ap_pos = get_ap_info(ap_file)
-#camera info
+
 for i in range(271):
     print i
     camera_t = camera_traj[i]
@@ -100,33 +100,19 @@ for i in range(271):
     disp_img_dir = './kitti_disp_gen/04/'
     seg_img_dir = './Demo04/ideal_result/'
     image_name = '{:0>6d}.png'.format(i)
-    # ori_img = cv2.imread('./Demo04/image_0/000000.png')
     ori_img = cv2.imread(path.join(ori_img_dir, image_name))
-    h, w, c = ori_img.shape
-    # print h, w, c
-    # print ori_img.shape
-    # disp_img = np.array(Image.open('./kitti_disp_gen/04/000000.png')) / 256
     disp_img = np.array(Image.open(path.join(disp_img_dir, image_name)))/256
     depth_img = bf / disp_img
     # print depth_img.max(), depth_img.min()
-    print depth_img.shape
-    # seg_img = np.array(Image.open('./Demo04/ideal_result/000000.png'))
+    # print depth_img.shape
     seg_img = np.array(Image.open(path.join(seg_img_dir, image_name)))
 
     cor_x = []
     cor_y = []
     for j in range(369, -1, -1):
         for k in range(1226):
-            if (seg_img[j][k] != 255):
+            if seg_img[j][k] != 255:
                 continue
-            # col = []
-            # for m in range(3):
-            #     a = ori_img[j][k][m] / 255
-            #     a = round(a, 1)
-            #     col.append(a)
-            # print j, k
-            # print col
-            # print ori_img[j][k][0]
             z = -(depth_img[j].max())
             # z = -depth_img[j][k]
             res = get_3d_wcor(j, k, z, rwc, ow)
