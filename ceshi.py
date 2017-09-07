@@ -82,6 +82,7 @@ def draw_points(camera_traj, x_p, y_p, ap_pos):
     road_right_all_3dx = []
     road_right_all_3dy = []
     for i in range(271):
+        print "i is : ", i
         fig1 = plt.figure(1)
         plt.pause(sleep_t)
         plt.clf()
@@ -129,21 +130,27 @@ def draw_points(camera_traj, x_p, y_p, ap_pos):
         uright = 0
         vright = 0
         for j in range(h - 1, -1, -1):
+            # for k in range(w):
+            #     if seg_img[j][k] == 255:
+            #         uleft = j
+            #         vleft = k
+            #         break
+            # for k in range(w - 1, -1, -1):
+            #     if seg_img[j][k] == 255:
+            #         uright = j
+            #         vright = k
+            #         break
             for k in range(w):
-                if seg_img[j][k] == 255:
-                    uleft = j
-                    vleft = k
-                    break
-            for k in range(w - 1, -1, -1):
-                if seg_img[j][k] == 255:
-                    uright = j
-                    vright = k
+                if seg_img[j][k] !=255:
+                    continue
+                else:
+                    z = -(img_depth[j].max())
                     break
             zleft = -img_depth[uleft][vleft]
-            left_res = get_3d_wcor(uleft, vleft, zleft, rwc, ow)
+            left_res = get_3d_wcor(uleft, vleft, z, rwc, ow)
             # print left_res
             zright = -img_depth[uright][vright]
-            right_res = get_3d_wcor(uright, vright, zright, rwc, ow)
+            right_res = get_3d_wcor(uright, vright, z, rwc, ow)
             road_left_curr_3dx.append(-left_res[0][0])
             road_left_curr_3dy.append(-left_res[2][0])
             road_right_curr_3dx.append(-right_res[0][0])
