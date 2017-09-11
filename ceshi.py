@@ -77,10 +77,6 @@ def draw_points(camera_traj, x_p, y_p, ap_pos):
              'deepskyblue', 'royalblue', 'violet', 'purple', 'green', 'chocolate']
     cars = []
     color_id = 0
-    road_left_all_3dx = []
-    road_left_all_3dy = []
-    road_right_all_3dx = []
-    road_right_all_3dy = []
     for i in range(271):
         print "i is : ", i
         fig1 = plt.figure(1)
@@ -107,58 +103,34 @@ def draw_points(camera_traj, x_p, y_p, ap_pos):
         ow = (-rwc).dot(mat_t)
 
         # Get depth map
-        img_dir = './kitti_disp_gen/04/'
+        disp_img_dir = './kitti_disp_gen/04/'
         img_name = '{:0>6d}.png'.format(i)
-        image_dir = path.join(img_dir, img_name)
-        img = np.array(Image.open(image_dir))
-        img = img / 256
-        img_depth = bf / img
+        disp_image_dir = path.join(disp_img_dir, img_name)
+        disp_img = np.array(Image.open(disp_image_dir))
+        disp_img = disp_img / 256
+        depth_img = bf / disp_img
         # print img_depth
         # print np.max(img_depth), np.min(img_depth)
 
-        road_left_curr_3dx = []
-        road_left_curr_3dy = []
-        road_right_curr_3dx = []
-        road_right_curr_3dy = []
         seg_img_dir = './Demo04/ideal_result/'
         seg_image_dir = path.join(seg_img_dir, img_name)
         seg_img = np.array(Image.open(seg_image_dir))
         h = seg_img.shape[0]
         w = seg_img.shape[1]
-        uleft = 0
-        vleft = 0
-        uright = 0
-        vright = 0
-        for j in range(h - 1, -1, -1):
-            # for k in range(w):
-            #     if seg_img[j][k] == 255:
-            #         uleft = j
-            #         vleft = k
-            #         break
-            # for k in range(w - 1, -1, -1):
-            #     if seg_img[j][k] == 255:
-            #         uright = j
-            #         vright = k
-            #         break
-            for k in range(w):
-                if seg_img[j][k] !=255:
-                    continue
-                else:
-                    z = -(img_depth[j].max())
-                    break
-            zleft = -img_depth[uleft][vleft]
-            left_res = get_3d_wcor(uleft, vleft, z, rwc, ow)
-            # print left_res
-            zright = -img_depth[uright][vright]
-            right_res = get_3d_wcor(uright, vright, z, rwc, ow)
-            road_left_curr_3dx.append(-left_res[0][0])
-            road_left_curr_3dy.append(-left_res[2][0])
-            road_right_curr_3dx.append(-right_res[0][0])
-            road_right_curr_3dy.append(-right_res[2][0])
-        plt.plot(road_left_curr_3dx[0:], road_left_curr_3dy[0:], c='black')
-        plt.plot(road_right_curr_3dx[0:], road_right_curr_3dy[0:], c='darkcyan')
-        # print "size is: ", len(road_left_curr_3dx)
 
+        road_x = []
+        road_y = []
+        for j in range(h-1, -1, -1):
+            for k in range(w-1, -1, -1):
+                if seg_img[j][k] != 255:
+                    continue
+                z = -(depth_img[j].max())
+                # z = -depth_img[j][k]
+                res = get_3d_wcor(j, k, z, rwc, ow)
+                road_x.append(-res[0][0])
+                road_y.append(-res[2][0])
+        plt.scatter(x=road_x[0:], y=road_y[0:], c=[0.5, 0.5, 0.5], marker='o')
+        
         # print "i is :", i, len(ap_pos[i])
         for line in (ap_pos[i]):
             line = line.split(' ')
@@ -174,19 +146,8 @@ def draw_points(camera_traj, x_p, y_p, ap_pos):
             cnt = 0.0
             for u in range(top, bottom):
                 for v in range(left, right):
-                    z = -img_depth[u][v]
-                    list_res = get_3d_wcor(u,v,z,rwc,ow)
-                    # x = (v-cx)*z*invfx
-                    # y = (u-cy)*z*invfy
-                    # x3dc = [[] for k in range(3)]
-                    # x3dc[0].append(x)
-                    # x3dc[1].append(y)
-                    # x3dc[2].append(z)
-                    # mat_3dc = np.mat(x3dc)
-                    # mat_res = rwc.dot(mat_3dc) + ow
-                    # # print mat_res[0][0], mat_res[2][0]
-                    # list_res = mat_res.tolist()
-                    # print list_res
+                    z = -depth_img[u][v]
+                    list_res = get_3d_wcor(u, v, z, rwc, ow)
                     total_x -= list_res[0][0]
                     total_y -= list_res[2][0]
                     cnt += 1.0
