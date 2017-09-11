@@ -2,11 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="56ba1bc5-a074-4fd9-8dde-6ae8178fa221" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Demo18/ap_out.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Demo18/camera.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Demo18/camera_pose.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Demo18/slam_out.txt" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ceshi.py" afterPath="$PROJECT_DIR$/ceshi.py" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -79,8 +74,8 @@
       <file leaf-file-name="ceshi.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/ceshi.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="678">
-              <caret line="132" column="8" lean-forward="false" selection-start-line="132" selection-start-column="8" selection-end-line="132" selection-end-column="8" />
+            <state relative-caret-position="4906">
+              <caret line="223" column="34" lean-forward="true" selection-start-line="223" selection-start-column="34" selection-end-line="223" selection-end-column="34" />
               <folding>
                 <element signature="e#0#31#0" expanded="true" />
               </folding>
@@ -169,20 +164,6 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="Demo" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Demo" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Demo" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Demo18" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -941,8 +922,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/ceshi.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="678">
-          <caret line="132" column="8" lean-forward="false" selection-start-line="132" selection-start-column="8" selection-end-line="132" selection-end-column="8" />
+        <state relative-caret-position="4906">
+          <caret line="223" column="34" lean-forward="true" selection-start-line="223" selection-start-column="34" selection-end-line="223" selection-end-column="34" />
           <folding>
             <element signature="e#0#31#0" expanded="true" />
           </folding>

@@ -130,7 +130,7 @@ def draw_points(camera_traj, x_p, y_p, ap_pos):
                 road_x.append(-res[0][0])
                 road_y.append(-res[2][0])
         plt.scatter(x=road_x[0:], y=road_y[0:], c=[0.5, 0.5, 0.5], marker='o')
-        
+
         # print "i is :", i, len(ap_pos[i])
         for line in (ap_pos[i]):
             line = line.split(' ')
