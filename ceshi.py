@@ -82,7 +82,7 @@ def draw_points(camera_traj, x_p, y_p, ap_pos):
         fig1 = plt.figure(1)
         plt.pause(sleep_t)
         plt.clf()
-        plt.axis([-100, 300, -100, 500])
+        plt.axis([-100, 300, 0, 450])
         plt.scatter(x=x_p[i], y=y_p[i], marker='o')
         plt.plot(x_p[0:i], y_p[0:i])
         existing_ids = []
@@ -129,6 +129,66 @@ def draw_points(camera_traj, x_p, y_p, ap_pos):
                 res = get_3d_wcor(j, k, z, rwc, ow)
                 road_x.append(-res[0][0])
                 road_y.append(-res[2][0])
+        # x1 = 0
+        # x2 = 0
+        # x3 = 0
+        # x4 = 0
+        # y1 = 0
+        # y2 = 0
+        # flag = 0
+        # road_update_x = []
+        # road_update_y = []
+        # for j in range(h):
+        #     if j in road_y:
+        #         y1 = j
+        #         flag = 1
+        #         for k in range(w):
+        #             if k in road_x:
+        #                 x3 = k
+        #                 break
+        #         for k in range(w - 1, -1, -1):
+        #             if k in road_x:
+        #                 x4 = k
+        #                 break
+        #         break
+        # y = y1
+        # for j in range(y+1, h, 1):
+        #     if j in road_y:
+        #         if flag == 1:
+        #             continue
+        #         else:
+        #             for k in range(w):
+        #                 if k in road_x:
+        #                     x3 = k
+        #                     break
+        #             for k in range(w-1, -1, -1):
+        #                 if k in road_x:
+        #                     x4 = k
+        #                     break
+        #             for k in range(y1+1, j, 1):
+        #                 x_min = (j-y1)/(k-y1)*(x3-x1)+x1
+        #                 x_max = (j-y1)/(k-y1)*(x4-x2)+x2
+        #                 for l in range(x_min, x_max+1, 1):
+        #                     road_update_x.append(l)
+        #                     road_update_y.append(k)
+        #     else:
+        #         if flag == 0:
+        #             continue
+        #         else:
+        #             for k in range(w):
+        #                 if k in road_x:
+        #                     x3 = k
+        #                     break
+        #             for k in range(w-1, -1, -1):
+        #                 if k in road_x:
+        #                     x4 = k
+        #                     break
+        #             for k in range(y1+1, j, 1):
+        #                 x_min = (j-y1)/(k-y1)*(x3-x1)+x1
+        #                 x_max = (j-y1)/(k-y1)*(x4-x2)+x2
+        #                 for l in range(x_min, x_max+1, 1):
+        #                     road_update_x.append(l)
+        #                     road_update_y.append(k)
         plt.scatter(x=road_x[0:], y=road_y[0:], c=[0.5, 0.5, 0.5], marker='o')
 
         # print "i is :", i, len(ap_pos[i])
@@ -176,6 +236,7 @@ def draw_points(camera_traj, x_p, y_p, ap_pos):
                     flag = 1
             if flag == 0:
                 cars.remove(m)
+        fig1.savefig('./SaveResults/04/{:0>6d}.png'.format(i))
 
         fig2 = plt.figure(2)
         # plt.axis([0, 1250, 350, 0])

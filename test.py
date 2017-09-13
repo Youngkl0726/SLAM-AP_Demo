@@ -50,24 +50,25 @@ print depth_img.max(), depth_img.min()
 print depth_img.shape
 seg_img = np.array(Image.open('./Demo04/ideal_result/000000.png'))
 print seg_img.shape
-for j in range(370):
-    for k in range(1226):
-        if seg_img[j][k] == 255:
-            # seg_img[j][k] = 100
-            for m in range(3):
-                ori_img[j][k][m] = 255
-        # ori_img[j][k][0] += seg_img[j][k]
-        # ori_img[j][k][0] %= 256
-# m = depth_img.max()
 # for j in range(370):
 #     for k in range(1226):
-#
-#         ori_img[j][k][0] = ori_img[j][k][0]*0.2 + 2 * (m-depth_img[j][k])
-#         ori_img[j][k][1] *= 0.2
-#         ori_img[j][k][2] *= 0.2
+#         if seg_img[j][k] == 255:
+#             # seg_img[j][k] = 100
+#             for m in range(3):
+#                 ori_img[j][k][m] = 255
+#         # ori_img[j][k][0] += seg_img[j][k]
+#         # ori_img[j][k][0] %= 256
+m = depth_img.max()
+for j in range(370):
+    for k in range(1226):
+
+        ori_img[j][k][0] = ori_img[j][k][0]*0.2 + 1 * (m-depth_img[j][k])
+        ori_img[j][k][1] *= 0.2
+        ori_img[j][k][2] *= 0.2
 figure = plt.figure()
 plt.clf()
 plt.imshow(ori_img, cmap='gray')
+print "ok"
 plt.show()
 
 
