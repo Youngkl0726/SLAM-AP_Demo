@@ -77,7 +77,7 @@ def draw_points(camera_traj, x_p, y_p, ap_pos):
              'deepskyblue', 'royalblue', 'violet', 'purple', 'green', 'chocolate']
     cars = []
     color_id = 0
-    for i in range(271):
+    for i in range(1):
         print "i is : ", i
         fig1 = plt.figure(1)
         plt.pause(sleep_t)
@@ -129,66 +129,7 @@ def draw_points(camera_traj, x_p, y_p, ap_pos):
                 res = get_3d_wcor(j, k, z, rwc, ow)
                 road_x.append(-res[0][0])
                 road_y.append(-res[2][0])
-        # x1 = 0
-        # x2 = 0
-        # x3 = 0
-        # x4 = 0
-        # y1 = 0
-        # y2 = 0
-        # flag = 0
-        # road_update_x = []
-        # road_update_y = []
-        # for j in range(h):
-        #     if j in road_y:
-        #         y1 = j
-        #         flag = 1
-        #         for k in range(w):
-        #             if k in road_x:
-        #                 x3 = k
-        #                 break
-        #         for k in range(w - 1, -1, -1):
-        #             if k in road_x:
-        #                 x4 = k
-        #                 break
-        #         break
-        # y = y1
-        # for j in range(y+1, h, 1):
-        #     if j in road_y:
-        #         if flag == 1:
-        #             continue
-        #         else:
-        #             for k in range(w):
-        #                 if k in road_x:
-        #                     x3 = k
-        #                     break
-        #             for k in range(w-1, -1, -1):
-        #                 if k in road_x:
-        #                     x4 = k
-        #                     break
-        #             for k in range(y1+1, j, 1):
-        #                 x_min = (j-y1)/(k-y1)*(x3-x1)+x1
-        #                 x_max = (j-y1)/(k-y1)*(x4-x2)+x2
-        #                 for l in range(x_min, x_max+1, 1):
-        #                     road_update_x.append(l)
-        #                     road_update_y.append(k)
-        #     else:
-        #         if flag == 0:
-        #             continue
-        #         else:
-        #             for k in range(w):
-        #                 if k in road_x:
-        #                     x3 = k
-        #                     break
-        #             for k in range(w-1, -1, -1):
-        #                 if k in road_x:
-        #                     x4 = k
-        #                     break
-        #             for k in range(y1+1, j, 1):
-        #                 x_min = (j-y1)/(k-y1)*(x3-x1)+x1
-        #                 x_max = (j-y1)/(k-y1)*(x4-x2)+x2
-        #                 for l in range(x_min, x_max+1, 1):
-        #                     road_update_x.append(l)
-        #                     road_update_y.append(k)
+
         plt.scatter(x=road_x[0:], y=road_y[0:], c=[0.5, 0.5, 0.5], marker='o')
 
         # print "i is :", i, len(ap_pos[i])
@@ -204,15 +145,31 @@ def draw_points(camera_traj, x_p, y_p, ap_pos):
             total_x = 0.0
             total_y = 0.0
             cnt = 0.0
+
+            depth_list = []
+            for u in range(top, bottom):
+                for v in range(left, right):
+                    depth_list.append(depth_img[u][v])
+            depth_set = set(depth_list)
+            mx = 0
+            for item in depth_set:
+                mx = max(mx, depth_list.count(item))
+                print item, depth_list.count(item)
+            key = -1
+            for item in depth_set:
+                if depth_list.count(item) == mx:
+                    key = item
+            print key
             for u in range(top, bottom):
                 for v in range(left, right):
                     z = -depth_img[u][v]
-                    list_res = get_3d_wcor(u, v, z, rwc, ow)
-                    total_x -= list_res[0][0]
-                    total_y -= list_res[2][0]
-                    cnt += 1.0
+                    if depth_img[u][v]-key < 5.0 or key-depth_img[u][v] < 5.0:
+                        list_res = get_3d_wcor(u, v, z, rwc, ow)
+                        total_x -= list_res[0][0]
+                        total_y -= list_res[2][0]
+                        cnt += 1.0
             flag = 0
-
+            print "cnt is: ", cnt
             for m in cars:
                 index = m.index
                 if index == car_id:
