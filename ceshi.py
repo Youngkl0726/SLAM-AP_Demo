@@ -77,7 +77,7 @@ def draw_points(camera_traj, x_p, y_p, ap_pos):
              'deepskyblue', 'royalblue', 'violet', 'purple', 'green', 'chocolate']
     cars = []
     color_id = 0
-    for i in range(1):
+    for i in range(10):
         print "i is : ", i
         fig1 = plt.figure(1)
         plt.pause(sleep_t)
@@ -107,6 +107,7 @@ def draw_points(camera_traj, x_p, y_p, ap_pos):
         img_name = '{:0>6d}.png'.format(i)
         disp_image_dir = path.join(disp_img_dir, img_name)
         disp_img = np.array(Image.open(disp_image_dir))
+        print disp_img.shape
         disp_img = disp_img / 256
         depth_img = bf / disp_img
         # print img_depth
