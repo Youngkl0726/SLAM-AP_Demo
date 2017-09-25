@@ -86,114 +86,114 @@ def draw_points(camera_traj, x_p, y_p, ap_pos):
         plt.pause(sleep_t)
         plt.clf()
 
-        traj_ped_img_dir = './sz_time/traj_ped/'
-        traj_ped_img_name = '{:0>6d}.png'.format(i)
-        traj_ped_image_dir = path.join(traj_ped_img_dir, traj_ped_img_name)
-        traj_ped_img = cv2.imread(traj_ped_image_dir)
-        plt.axis('off')
-        plt.imshow(traj_ped_img, cmap='gray')
+        # traj_ped_img_dir = './sz_time/traj_ped/'
+        # traj_ped_img_name = '{:0>6d}.png'.format(i)
+        # traj_ped_image_dir = path.join(traj_ped_img_dir, traj_ped_img_name)
+        # traj_ped_img = cv2.imread(traj_ped_image_dir)
+        # plt.axis('off')
+        # plt.imshow(traj_ped_img, cmap='gray')
 
-        # plt.axis([-50, 100, 0, 200])
-        # plt.scatter(x=x_p[i], y=y_p[i], marker='o')
-        # plt.plot(x_p[0:i], y_p[0:i])
-        # existing_ids = []
-        # camera_t = camera_traj[i]
-        # camera = camera_t[0]
-        #
-        # r = [[] for k in range(3)]
-        # for k in range(3):
-        #     for j in range(3):
-        #         r[k].append(float(camera[j + k * 4]))
-        # mat_r = np.mat(r)
-        # t = [[] for k in range(3)]
-        # for k in range(3):
-        #     t[k].append(float(camera[3 + k * 4]))
-        # mat_t = np.mat(t)
-        # rwc = mat_r.transpose()
-        # ow = (-rwc).dot(mat_t)
-        #
-        # # Get depth map
-        # disp_img_dir = './sz_time/disp_ped_resize/'
-        # img_name = '{:0>6d}.png'.format(i)
-        # disp_image_dir = path.join(disp_img_dir, img_name)
-        # disp_img = np.array(Image.open(disp_image_dir))
-        # # print disp_img
-        # for u in range(457):
-        #     for v in range(801):
-        #         # disp_img[u][v][0] = 1
-        #         if disp_img[u][v].any() == 0:
-        #             disp_img[u][v][:] = 1
-        # # disp_img = disp_img / 256
-        # depth_img = bf / disp_img
-        # # print img_depth
-        # # print np.max(img_depth), np.min(img_depth)
-        #
-        #
-        # # print "i is :", i, len(ap_pos[i])
-        # for line in (ap_pos[i]):
-        #     line = line.split(' ')
-        #     car_id = int(line[0])
-        #     # if car_id != 6:
-        #     #     continue
-        #     existing_ids.append(car_id)
-        #     left = int(line[1])
-        #     top = int(line[2])
-        #     right = int(line[3])
-        #     bottom = int(line[4])
-        #
-        #     total_x = 0.0
-        #     total_y = 0.0
-        #     cnt = 0.0
-        #
-        #     # depth_list = []
-        #     # for u in range(top, bottom):
-        #     #     for v in range(left, right):
-        #     #         depth_list.append(depth_img[u][v])
-        #     # depth_set = set(depth_list)
-        #     # mx = 0
-        #     # for item in depth_set:
-        #     #     mx = max(mx, depth_list.count(item))
-        #     #     print item, depth_list.count(item)
-        #     # key = -1
-        #     # for item in depth_set:
-        #     #     if depth_list.count(item) == mx:
-        #     #         key = item
-        #     # print key
-        #     for u in range(top, bottom):
-        #         for v in range(left, right):
-        #             z = -depth_img[u][v][0]
-        #             # z = 50
-        #             list_res = get_3d_wcor(u, v, z, rwc, ow)
-        #             total_x -= list_res[0][0]
-        #             total_y -= list_res[2][0]
-        #             cnt += 1.0
-        #     if cnt == 0:
-        #         continue
-        #     flag = 0
-        #     # print "cnt is: ", cnt
-        #     for m in cars:
-        #         index = m.index
-        #         if index == car_id:
-        #             flag = 1
-        #             m.cor_x.append(total_x / cnt)
-        #             m.cor_y.append(total_y / cnt)
-        #             plt.plot(m.cor_x[0:], m.cor_y[0:], c=color[m.color])
-        #             plt.scatter(x=m.cor_x[-1], y=m.cor_y[-1], c=color[m.color], marker='o')
-        #             break
-        #     if flag == 0:
-        #         new_car = Cars(color_id, car_id, total_x / cnt, total_y / cnt)
-        #         plt.scatter(x=new_car.cor_x[0:], y=new_car.cor_y[0:], c=color[new_car.color], marker='o')
-        #         cars.append(new_car)
-        #         color_id += 1
-        #         color_id = color_id % 12
-        #
-        # for m in cars:
-        #     flag = 0
-        #     for n in existing_ids:
-        #         if n == m.index:
-        #             flag = 1
-        #     if flag == 0:
-        #         cars.remove(m)
+        plt.axis([-50, 100, 0, 200])
+        plt.scatter(x=x_p[i], y=y_p[i], marker='o')
+        plt.plot(x_p[0:i], y_p[0:i])
+        existing_ids = []
+        camera_t = camera_traj[i]
+        camera = camera_t[0]
+
+        r = [[] for k in range(3)]
+        for k in range(3):
+            for j in range(3):
+                r[k].append(float(camera[j + k * 4]))
+        mat_r = np.mat(r)
+        t = [[] for k in range(3)]
+        for k in range(3):
+            t[k].append(float(camera[3 + k * 4]))
+        mat_t = np.mat(t)
+        rwc = mat_r.transpose()
+        ow = (-rwc).dot(mat_t)
+
+        # Get depth map
+        disp_img_dir = './sz_time/disp_ped_resize/'
+        img_name = '{:0>6d}.png'.format(i)
+        disp_image_dir = path.join(disp_img_dir, img_name)
+        disp_img = np.array(Image.open(disp_image_dir))
+        # print disp_img
+        for u in range(457):
+            for v in range(801):
+                # disp_img[u][v][0] = 1
+                if disp_img[u][v].any() == 0:
+                    disp_img[u][v][:] = 1
+        # disp_img = disp_img / 256
+        depth_img = bf / disp_img
+        # print img_depth
+        # print np.max(img_depth), np.min(img_depth)
+
+
+        # print "i is :", i, len(ap_pos[i])
+        for line in (ap_pos[i]):
+            line = line.split(' ')
+            car_id = int(line[0])
+            # if car_id != 6:
+            #     continue
+            existing_ids.append(car_id)
+            left = int(line[1])
+            top = int(line[2])
+            right = int(line[3])
+            bottom = int(line[4])
+
+            total_x = 0.0
+            total_y = 0.0
+            cnt = 0.0
+
+            # depth_list = []
+            # for u in range(top, bottom):
+            #     for v in range(left, right):
+            #         depth_list.append(depth_img[u][v])
+            # depth_set = set(depth_list)
+            # mx = 0
+            # for item in depth_set:
+            #     mx = max(mx, depth_list.count(item))
+            #     print item, depth_list.count(item)
+            # key = -1
+            # for item in depth_set:
+            #     if depth_list.count(item) == mx:
+            #         key = item
+            # print key
+            for u in range(top, bottom):
+                for v in range(left, right):
+                    z = -depth_img[u][v][0]
+                    # z = 50
+                    list_res = get_3d_wcor(u, v, z, rwc, ow)
+                    total_x -= list_res[0][0]
+                    total_y -= list_res[2][0]
+                    cnt += 1.0
+            if cnt == 0:
+                continue
+            flag = 0
+            # print "cnt is: ", cnt
+            for m in cars:
+                index = m.index
+                if index == car_id:
+                    flag = 1
+                    m.cor_x.append(total_x / cnt)
+                    m.cor_y.append(total_y / cnt)
+                    plt.plot(m.cor_x[0:], m.cor_y[0:], c=color[m.color])
+                    plt.scatter(x=m.cor_x[-1], y=m.cor_y[-1], c=color[m.color], marker='o')
+                    break
+            if flag == 0:
+                new_car = Cars(color_id, car_id, total_x / cnt, total_y / cnt)
+                plt.scatter(x=new_car.cor_x[0:], y=new_car.cor_y[0:], c=color[new_car.color], marker='o')
+                cars.append(new_car)
+                color_id += 1
+                color_id = color_id % 12
+
+        for m in cars:
+            flag = 0
+            for n in existing_ids:
+                if n == m.index:
+                    flag = 1
+            if flag == 0:
+                cars.remove(m)
         # fig1.savefig('./sz_time/traj_ped/{:0>6d}.png'.format(i))
 
         fig2 = plt.figure(2)

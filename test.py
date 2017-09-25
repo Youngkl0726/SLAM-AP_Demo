@@ -92,7 +92,7 @@ def draw_points(x_p, y_p, slam_pic_pos, slam_3d_pos, ap_pos):
         point_y = []
         for line in (slam_3d_pos[i]):
             line = line.split(' ')
-            print 'line[0] is : ', line[0]
+            # print 'line[0] is : ', line[0]
             x = float(line[0])
             y = float(line[1])
             point_x.append(x)
