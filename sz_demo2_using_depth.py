@@ -24,7 +24,7 @@ invfx = 1.0 / fx
 invfy = 1.0 / fy
 
 # get camera trajectory
-def get_camera_traj(filename):
+def get_camera_traj1(filename):
     camera_file = open(filename)
     x_p = []
     y_p = []
@@ -40,6 +40,48 @@ def get_camera_traj(filename):
         y_p.append(y)
     camera_file.close()
     return camera_traj, x_p, y_p
+
+def get_camera_traj(filename):
+    x_p = []
+    y_p = []
+    camera_traj = [[] for i in range(400)]
+    camera_file = open(filename)
+    id = -1
+    cnt = 0
+    flag = 0
+    num_r = 0
+    line = ""
+    for i in range(7250):
+        camera_line = camera_file.readline()
+        camera_line = camera_line.strip()
+        li = camera_line.split(" ")
+        # print camera_line[0]
+        if camera_line[0] == 'T':
+            id += 1
+            num_r = 0
+            if flag == 1:
+                camera_traj[id].append(camera_traj[id-1][0])
+                x_p.append(x_p[id-1])
+                y_p.append(y_p[id-1])
+        if camera_line[0] == 'R':
+            if num_r == 1:
+                continue
+            flag = 1
+            if id != 0:
+                camera_traj[id].pop()
+                x_p.pop()
+                y_p.pop()
+            # print camera_line
+            camera_line = camera_line.split(" ")
+            # print camera_line
+            camera_traj[id].append(camera_line[1:])
+            x = float(li[3])
+            y = float(li[11])
+            x_p.append(x)
+            y_p.append(y)
+            num_r = 1
+    return camera_traj, x_p, y_p
+
 
 # get the coordinates of boxes from AP
 def get_ap_info(filename):
@@ -118,16 +160,15 @@ def draw_points(camera_traj, x_p, y_p, ap_pos):
         disp_image_dir = path.join(disp_img_dir, img_name)
         disp_img = np.array(Image.open(disp_image_dir))
         # print disp_img
-        for u in range(457):
-            for v in range(801):
-                # disp_img[u][v][0] = 1
-                if disp_img[u][v].any() == 0:
-                    disp_img[u][v][:] = 1
+        # for u in range(457):
+        #     for v in range(801):
+        #         # disp_img[u][v][0] = 1
+        #         if disp_img[u][v].any() == 0:
+        #             disp_img[u][v][:] = 1
         # disp_img = disp_img / 256
         depth_img = bf / disp_img
         # print img_depth
         # print np.max(img_depth), np.min(img_depth)
-
 
         # print "i is :", i, len(ap_pos[i])
         for line in (ap_pos[i]):
@@ -145,27 +186,13 @@ def draw_points(camera_traj, x_p, y_p, ap_pos):
             total_y = 0.0
             cnt = 0.0
 
-            # depth_list = []
-            # for u in range(top, bottom):
-            #     for v in range(left, right):
-            #         depth_list.append(depth_img[u][v])
-            # depth_set = set(depth_list)
-            # mx = 0
-            # for item in depth_set:
-            #     mx = max(mx, depth_list.count(item))
-            #     print item, depth_list.count(item)
-            # key = -1
-            # for item in depth_set:
-            #     if depth_list.count(item) == mx:
-            #         key = item
-            # print key
             for u in range(top, bottom):
                 for v in range(left, right):
-                    z = -depth_img[u][v][0]
-                    # z = 50
+                    # z = -depth_img[u][v][0]
+                    z = 50
                     list_res = get_3d_wcor(u, v, z, rwc, ow)
-                    total_x -= list_res[0][0]
-                    total_y -= list_res[2][0]
+                    total_x += list_res[0][0]
+                    total_y += list_res[2][0]
                     cnt += 1.0
             if cnt == 0:
                 continue
@@ -256,12 +283,13 @@ def draw_points(camera_traj, x_p, y_p, ap_pos):
     plt.show()
 
 def main():
-    camera_file = r'./sz_time/CameraTrajectory2.txt'
+    camera_file1 = r'./sz_time/CameraTrajectory2.txt'
+    camera_file = r'./sz_time/slam_ped.txt'
     ap_file = r'./sz_time/aptime2.txt'
+    camera_traj1, camera_x1, camera_y1 = get_camera_traj1(camera_file1)
     camera_traj, camera_x, camera_y = get_camera_traj(camera_file)
-    print len(camera_x)
     ap_pos = get_ap_info(ap_file)
-    draw_points(camera_traj, camera_x, camera_y, ap_pos)
+    draw_points(camera_traj, camera_x1, camera_y1, ap_pos)
 
 
 if __name__ == '__main__':

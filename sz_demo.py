@@ -175,7 +175,6 @@ def draw_points(camera_traj, x_p, y_p, ap_pos):
         # print img_depth
         # print np.max(img_depth), np.min(img_depth)
 
-
         # print "i is :", i, len(ap_pos[i])
         for line in (ap_pos[i]):
             line = line.split(' ')
@@ -192,20 +191,6 @@ def draw_points(camera_traj, x_p, y_p, ap_pos):
             total_y = 0.0
             cnt = 0.0
 
-            # depth_list = []
-            # for u in range(top, bottom):
-            #     for v in range(left, right):
-            #         depth_list.append(depth_img[u][v])
-            # depth_set = set(depth_list)
-            # mx = 0
-            # for item in depth_set:
-            #     mx = max(mx, depth_list.count(item))
-            #     print item, depth_list.count(item)
-            # key = -1
-            # for item in depth_set:
-            #     if depth_list.count(item) == mx:
-            #         key = item
-            # print key
             for u in range(top, bottom):
                 for v in range(left, right):
                     # z = depth_img[u][v][0]
@@ -304,7 +289,7 @@ def draw_points(camera_traj, x_p, y_p, ap_pos):
 
 def main():
     camera_file1 = r'./sz_time/CameraTrajectory.txt'
-    camera_file = 'slamout.txt'
+    camera_file = r'./sz_time/slamout.txt'
     ap_file = r'./sz_time/aptime.txt'
     camera_traj, camera_x, camera_y = get_camera_traj(camera_file)
     camera_traj1, camera_x1, camera_y1 = get_camera_traj1(camera_file1)
