@@ -23,6 +23,7 @@ cy = 220
 invfx = 1.0 / fx
 invfy = 1.0 / fy
 
+# get R&t from file
 def get_camera_traj(filename):
     camera_traj = [[] for i in range(500)]
     camera_file = open(filename)
@@ -73,6 +74,7 @@ def get_ap_info(filename):
     ap_file.close()
     return ap_pos
 
+# back projects a pixel into 3D world coordinates
 def get_3d_wcor(u, v, z, rwc, ow):
     x = (v - cx) * z * invfx
     y = (u - cy) * z * invfy
@@ -87,7 +89,7 @@ def get_3d_wcor(u, v, z, rwc, ow):
     return list_res
 
 
-# Visualize camera trajectory, MapPoints in pictures and AP boxes of cars
+# Visualize camera trajectory, AP boxes of cars and the trajectory of cars
 def draw_points(camera_traj, ap_pos):
     sleep_t = 0.001
     color = ['red', 'brown', 'darkorange', 'darkmagenta', 'teal',
@@ -130,7 +132,6 @@ def draw_points(camera_traj, ap_pos):
         plt.plot(x_p[0:i], y_p[0:i])
         existing_ids = []
 
-        # print ow_list[0], ow_list[2]
         # Get depth map
         disp_img_dir = './sz_time/disp/'
         img_name = '{:0>6d}.png'.format(i)
@@ -256,11 +257,9 @@ def draw_points(camera_traj, ap_pos):
     plt.show()
 
 def main():
-    # camera_file1 = r'./sz_time/CameraTrajectory.txt'
     camera_file = r'./sz_time/slamout.txt'
     ap_file = r'./sz_time/aptime.txt'
     camera_traj = get_camera_traj(camera_file)
-    # camera_traj1, camera_x1, camera_y1 = get_camera_traj1(camera_file1)
     ap_pos = get_ap_info(ap_file)
     draw_points(camera_traj, ap_pos)
 

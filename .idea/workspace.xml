@@ -66,8 +66,8 @@
       <file leaf-file-name="sz_demo.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/sz_demo.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-302">
-              <caret line="200" column="28" lean-forward="false" selection-start-line="200" selection-start-column="28" selection-end-line="200" selection-end-column="28" />
+            <state relative-caret-position="1174">
+              <caret line="246" column="0" lean-forward="true" selection-start-line="246" selection-start-column="0" selection-end-line="246" selection-end-column="0" />
               <folding>
                 <element signature="e#0#31#0" expanded="true" />
               </folding>
@@ -977,8 +977,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/sz_demo.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-302">
-          <caret line="200" column="28" lean-forward="false" selection-start-line="200" selection-start-column="28" selection-end-line="200" selection-end-column="28" />
+        <state relative-caret-position="1174">
+          <caret line="246" column="0" lean-forward="true" selection-start-line="246" selection-start-column="0" selection-end-line="246" selection-end-column="0" />
           <folding>
             <element signature="e#0#31#0" expanded="true" />
           </folding>
