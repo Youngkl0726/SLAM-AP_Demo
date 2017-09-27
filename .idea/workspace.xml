@@ -2,10 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="56ba1bc5-a074-4fd9-8dde-6ae8178fa221" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/DepthToBv.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Draw.py" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ProcessData.py" afterPath="$PROJECT_DIR$/ProcessData.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sz_demo.py" afterPath="$PROJECT_DIR$/sz_demo.py" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -70,8 +66,8 @@
       <file leaf-file-name="sz_demo.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/sz_demo.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-4252">
-              <caret line="74" column="22" lean-forward="false" selection-start-line="74" selection-start-column="22" selection-end-line="74" selection-end-column="22" />
+            <state relative-caret-position="-302">
+              <caret line="200" column="28" lean-forward="false" selection-start-line="200" selection-start-column="28" selection-end-line="200" selection-end-column="28" />
               <folding>
                 <element signature="e#0#31#0" expanded="true" />
               </folding>
@@ -981,8 +977,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/sz_demo.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-4252">
-          <caret line="74" column="22" lean-forward="false" selection-start-line="74" selection-start-column="22" selection-end-line="74" selection-end-column="22" />
+        <state relative-caret-position="-302">
+          <caret line="200" column="28" lean-forward="false" selection-start-line="200" selection-start-column="28" selection-end-line="200" selection-end-column="28" />
           <folding>
             <element signature="e#0#31#0" expanded="true" />
           </folding>

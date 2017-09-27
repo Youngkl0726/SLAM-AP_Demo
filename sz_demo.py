@@ -23,24 +23,6 @@ cy = 220
 invfx = 1.0 / fx
 invfy = 1.0 / fy
 
-# get camera trajectory
-# def get_camera_traj1(filename):
-#     camera_file = open(filename)
-#     x_p = []
-#     y_p = []
-#     camera_traj = [[] for i in range(500)]
-#     for i in range(500):
-#         camera_line = camera_file.readline()
-#         camera_line = camera_line.strip()
-#         camera_line = camera_line.split(" ")
-#         camera_traj[i].append(camera_line)
-#         x = float(camera_line[3])
-#         y = float(camera_line[11])
-#         x_p.append(x)
-#         y_p.append(y)
-#     camera_file.close()
-#     return camera_traj, x_p, y_p
-
 def get_camera_traj(filename):
     camera_traj = [[] for i in range(500)]
     camera_file = open(filename)
@@ -169,8 +151,6 @@ def draw_points(camera_traj, ap_pos):
         for line in (ap_pos[i]):
             line = line.split(' ')
             car_id = int(line[0])
-            # if car_id != 6:
-            #     continue
             existing_ids.append(car_id)
             left = int(line[1])
             top = int(line[2])
@@ -219,13 +199,11 @@ def draw_points(camera_traj, ap_pos):
         # fig1.savefig('./sz_time/traj_car/{:0>6d}.png'.format(i))
 
         fig2 = plt.figure(2)
-        # plt.axis([0, 1250, 350, 0])
         plt.pause(sleep_t)
         plt.clf()
 
         file_dir = './sz_time/left_time/'
         image_name = '{:0>6d}.png'.format(i)
-        # img = mpimg.imread(path.join(file_dir, image_name))
         img = mpimg.imread(path.join(file_dir, image_name))
         plt.imshow(img, cmap='gray')
 
