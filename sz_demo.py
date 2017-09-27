@@ -162,10 +162,14 @@ def draw_points(camera_traj, ap_pos):
             total_y = 0.0
             cnt = 0.0
 
+            vv = (left+right)/2
+            dep = 1.5 * fy / (cy -vv)
+            if dep < 0:
+                dep = -1*dep
             for u in range(top, bottom):
                 for v in range(left, right):
                     # z = depth_img[u][v][0]
-                    z = 50
+                    z = dep
                     list_res = get_3d_wcor(u, v, z, rwc, ow)
                     total_x += list_res[0][0]
                     total_y += list_res[2][0]
