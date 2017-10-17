@@ -15,7 +15,7 @@ class Cars:
         self.cor_x.append(x)
         self.cor_y.append(y)
 
-bf = 96.768
+bf = 40.000
 fx = 672
 fy = 672
 cx = 393
@@ -32,7 +32,7 @@ def get_camera_traj(filename):
     flag = 0
     num_r = 0
     line = ""
-    for i in range(14870):
+    for i in range(29872):
         camera_line = camera_file.readline()
         camera_line = camera_line.strip()
         li = camera_line.split(" ")
@@ -42,6 +42,8 @@ def get_camera_traj(filename):
             num_r = 0
             if flag == 1:
                 camera_traj[id].append(camera_traj[id-1][0])
+        if camera_line[0] == '(':
+             continue
         if camera_line[0] == 'R':
             if num_r == 1:
                 continue
@@ -55,8 +57,26 @@ def get_camera_traj(filename):
             x = float(li[3])
             y = float(li[11])
             num_r = 1
+    camera_file.close()
     return camera_traj
 
+def get_depthinfo_slam(filename):
+    depth = [[] for i in range(620)]
+    slam_pic_pos = [[] for i in range(620)]
+    id = -1
+    camera_file = open(filename)
+    for i in range(29872):
+        camera_line = camera_file.readline()
+        camera_line = camera_line.strip()
+        if camera_line[0] == 'T':
+            id += 1
+        if camera_line[0] == '(':
+            slam_pic_pos[id].append(camera_line[1:-1])
+        if camera_line[0] == 'R':
+            camera_line = camera_line.split(" ")
+            depth[id].append(float(camera_line[13]))
+    camera_file.close()
+    return depth, slam_pic_pos
 
 # get the coordinates of boxes from AP
 def get_ap_info(filename):
@@ -90,7 +110,7 @@ def get_3d_wcor(u, v, z, rwc, ow):
 
 
 # Visualize camera trajectory, AP boxes of cars and the trajectory of cars
-def draw_points(camera_traj, ap_pos):
+def draw_points(camera_traj, ap_pos, depth, slam_pic_pos):
     sleep_t = 0.001
     color = ['red', 'brown', 'darkorange', 'darkmagenta', 'teal',
              'deepskyblue', 'royalblue', 'violet', 'purple', 'green', 'chocolate', 'black']
@@ -127,6 +147,7 @@ def draw_points(camera_traj, ap_pos):
         ow_list = ow.tolist()
         x_p.append(ow_list[0])
         y_p.append(ow_list[2])
+        print "camera y is: ", ow_list[2]
         plt.axis([-10, 10, 0, 150])
         plt.scatter(x=x_p[i], y=y_p[i], marker='o')
         plt.plot(x_p[0:i], y_p[0:i])
@@ -137,7 +158,7 @@ def draw_points(camera_traj, ap_pos):
         img_name = '{:0>6d}.png'.format(i)
         disp_image_dir = path.join(disp_img_dir, img_name)
         disp_img = np.array(Image.open(disp_image_dir))
-        print disp_img
+        # print disp_img
         # for u in range(456):
         #     for v in range(801):
         #         disp_img[u][v][0] = 1
@@ -147,6 +168,16 @@ def draw_points(camera_traj, ap_pos):
         depth_img = bf / disp_img
         # print img_depth
         # print np.max(img_depth), np.min(img_depth)
+
+        pic_x = []
+        pic_y = []
+        for line in (slam_pic_pos[i]):
+            line = line.split(' ')
+            x = float(line[0])
+            y = float(line[1])
+            pic_x.append(x)
+            pic_y.append(y)
+        slam_len = len(pic_x)
 
         # print "i is :", i, len(ap_pos[i])
         for line in (ap_pos[i]):
@@ -162,6 +193,9 @@ def draw_points(camera_traj, ap_pos):
             total_y = 0.0
             cnt = 0.0
 
+            if car_id != 10:
+                continue
+
             # vv = bottom
             # dep = 1.8 * fy / (cy -vv)
             # if dep < 0:
@@ -172,15 +206,15 @@ def draw_points(camera_traj, ap_pos):
             # total_y = list_res[2][0]
             # cnt = 1
 
-            for u in range(top, bottom):
-                for v in range(left, right):
-                    z = depth_img[u][v]
-                    # z = 50
-                    print z
-                    list_res = get_3d_wcor(u, v, z, rwc, ow)
-                    total_x += list_res[0][0]
-                    total_y += list_res[2][0]
-                    cnt += 1.0
+            # for u in range(top, bottom):
+            #     for v in range(left, right):
+            #         z = depth_img[u][v]
+            #         # z = 50
+            #         print z
+            #         list_res = get_3d_wcor(u, v, z, rwc, ow)
+            #         total_x += list_res[0][0]
+            #         total_y += list_res[2][0]
+            #         cnt += 1.0
             if cnt == 0:
                 continue
             flag = 0
@@ -226,6 +260,9 @@ def draw_points(camera_traj, ap_pos):
         ap_bottom = []
         for line in (ap_pos[i]):
             line = line.split(' ')
+            car_id = int(line[0])
+            if car_id != 10:
+                continue
             left = float(line[1])
             top = float(line[2])
             right = float(line[3])
@@ -234,6 +271,16 @@ def draw_points(camera_traj, ap_pos):
             ap_top.append(top)
             ap_right.append(right)
             ap_bottom.append(bottom)
+            for j in range(slam_len):
+                x = pic_x[j]
+                y = pic_y[j]
+
+                if x - left > 0.0000001 and right - x > 0.0000001 and y - top > 0.0000001 and bottom - y > 0.0000001:
+                    print x, y
+                    print "depth from slam is :", depth[i][j]
+                    print "depth from Stereo is :", depth_img[int(y)][int(x)]
+                    print "ratio is : ", depth[i][j]/depth_img[int(y)][int(x)]
+                    plt.scatter(x=x, y=y, c='red', marker='o')
         ap_len = len(ap_top)
         for k in range(ap_len):
             left = ap_left[k]
@@ -257,6 +304,8 @@ def draw_points(camera_traj, ap_pos):
             plt.plot([p4[0], p2[0]], [p4[1], p2[1]], c='green')
             plt.plot([p4[0], p3[0]], [p4[1], p3[1]], c='green')
 
+
+
         fig3 = plt.figure(3)
         plt.axis([0, 801, 456, 0])
         plt.pause(sleep_t)
@@ -269,11 +318,13 @@ def draw_points(camera_traj, ap_pos):
     plt.show()
 
 def main():
-    camera_file = r'./sz_time/slam_0929_2.txt'
+    # camera_file = r'./sz_time/slam_0929_2.txt'
+    camera_file = r'./sz_time/0929-1009.txt'
     ap_file = r'./sz_time/ap0929.txt'
     camera_traj = get_camera_traj(camera_file)
     ap_pos = get_ap_info(ap_file)
-    draw_points(camera_traj, ap_pos)
+    depth, slam_pic_pos = get_depthinfo_slam(camera_file)
+    draw_points(camera_traj, ap_pos, depth, slam_pic_pos)
 
 
 if __name__ == '__main__':
