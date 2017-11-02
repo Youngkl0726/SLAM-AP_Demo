@@ -4,23 +4,30 @@ from os import path
 from PIL import Image
 import numpy as np
 import cv2
+import math
+from scipy.optimize import curve_fit
 
 class Cars:
 
-    def __init__(self, color, index, x, y):
+    def __init__(self, color, index, x, y, picx, picy, depth, rwc, ow):
         self.cor_x = []
         self.cor_y = []
+        self.pic_x = []
+        self.pic_y = []
+        self.rw = []
+        self.o = []
         self.color = color
         self.index = index
         self.cor_x.append(x)
         self.cor_y.append(y)
+        self.pic_x.append(picx)
+        self.pic_y.append(picy)
+        self.rw.append(rwc)
+        self.o.append(ow)
+        self.cnt = 1
+        self.depth = depth
 
-class Len:
-    def __init__(self, index, length):
-        self.index = index
-        self.length =length
-
-bf = 40
+bf = 24
 fx = 672
 fy = 672
 cx = 393
@@ -30,14 +37,14 @@ invfy = 1.0 / fy
 
 # get R&t from file
 def get_camera_traj(filename):
-    camera_traj = [[] for i in range(360)]
+    camera_traj = [[] for i in range(237)]
     camera_file = open(filename)
     id = -1
     cnt = 0
     flag = 0
     num_r = 0
     line = ""
-    for i in range(5836):
+    for i in range(3930):
         camera_line = camera_file.readline()
         camera_line = camera_line.strip()
         li = camera_line.split(" ")
@@ -57,8 +64,6 @@ def get_camera_traj(filename):
             camera_line = camera_line.split(" ")
             # print camera_line
             camera_traj[id].append(camera_line[1:])
-            x = float(li[3])
-            y = float(li[11])
             num_r = 1
     return camera_traj
 
@@ -67,8 +72,8 @@ def get_camera_traj(filename):
 def get_ap_info(filename):
     ap_file = open(filename)
     ap_num = -1
-    ap_pos = [[] for i in range(360)]
-    for i in range(463):
+    ap_pos = [[] for i in range(237)]
+    for i in range(335):
         ap_line = ap_file.readline()
         ap_line = ap_line.strip()
         if ap_line[0] == 's':
@@ -91,8 +96,24 @@ def get_3d_wcor(u, v, z, rwc, ow):
     mat_res = rwc.dot(mat_3dc) + ow
     # print mat_res[0][0], mat_res[2][0]
     list_res = mat_res.tolist()
-    return list_res
+    return list_res[0][0], list_res[2][0]
 
+def rotate_point(x, y):
+    a = math.atan2(2, 36)
+    si = math.sin(a)
+    co = math.cos(a)
+    xx = x*co - y*si
+    yy = y*co + x*si
+    return xx, yy
+
+def cal_depth(u, v):
+    r = [7.21914340e+02, 2.27910142e+02, 3.54430380e-02]
+    d = r[0] / (v - r[2] * u - r[1])
+    return d
+
+def f_2(x, a, b, c):
+    y = a * x * x + b * x + c
+    return y
 
 # Visualize camera trajectory, AP boxes of cars and the trajectory of cars
 def draw_points(camera_traj, ap_pos):
@@ -100,18 +121,10 @@ def draw_points(camera_traj, ap_pos):
     color = ['red', 'brown', 'darkorange', 'darkmagenta', 'teal',
              'deepskyblue', 'royalblue', 'violet', 'purple', 'green', 'chocolate', 'black']
     cars = []
-    lens = []
     color_id = 0
     x_p = []
     y_p = []
-    pre_key = -1
-    vvv = []
-    idd = []
-    speed = []
-    # ori_y = 0.0
-    keyframenum = -1
-    flag_t = 0.0
-    for i in range(360):
+    for i in range(237):
         # idd.append(i)
         print "i is : ", i
         fig1 = plt.figure(1)
@@ -140,61 +153,31 @@ def draw_points(camera_traj, ap_pos):
 
         ow = (-rwc).dot(mat_t)
         ow_list = ow.tolist()
-        if i == 208 or i == 300 or i == 257:
-            print rwc
-            print ow_list
+
+        # Rotation
+        ow_list[0], ow_list[2] = rotate_point(ow_list[0][0], ow_list[2][0])
         x_p.append(ow_list[0])
         y_p.append(ow_list[2])
-        length = len(x_p)
-        x_pre = x_p[length-2]
-        y_pre = y_p[length-2]
-        x_curr = x_p[length - 1]
-        y_curr = y_p[length - 1]
-        # print x_pre[0], y_pre[0]
-        leng = (x_curr[0] - x_pre[0])*(x_curr[0] - x_pre[0]) + (y_curr[0] - y_pre[0])*(y_curr[0] - y_pre[0])
-        spe = np.sqrt(leng)
-        if i == 0:
-            speed.append(0)
-            keyframenum = keyframenum+1
-            idd.append(keyframenum)
-        if i != 0 and spe != 0.0:
-            delta_t = (i - flag_t)*40.0/1000.0
-            flag_t = i
-            print spe/delta_t
-            if spe/delta_t > 5.0 and spe/delta_t < 6.0 :
-                print "hehe"
-            speed.append(spe/delta_t)
-            keyframenum = keyframenum + 1
-            idd.append(keyframenum)
-        print "camera y is : ", ow_list[2]
-        for yy in ow_list[2]:
-            ori_y = yy
-            # print yy, ori_y
-            # if yy - ori_y > 0.0000:
-            #     resd_y = yy - ori_y
-            #     ori_y = yy
-            #     print resd_y
-        plt.axis([-10, 5, 0, 90])
+        print "camera is : ", ow_list[0], ow_list[2]
+
+        plt.axis([-6, 6, 0, 25])
         plt.scatter(x=x_p[i], y=y_p[i], marker='o')
         plt.plot(x_p[0:i], y_p[0:i])
         existing_ids = []
 
         # Get depth map
-        disp_img_dir = './sz_time/disp_1002_resize/'
-        img_name = '{:0>6d}.png'.format(i)
-        disp_image_dir = path.join(disp_img_dir, img_name)
-        disp_img = np.array(Image.open(disp_image_dir))
-
-        disp_img = disp_img / 256
-        depth_img = bf / disp_img
+        # disp_img_dir = './sz_time/disp_1002_resize/'
+        # img_name = '{:0>6d}.png'.format(i)
+        # disp_image_dir = path.join(disp_img_dir, img_name)
+        # disp_img = np.array(Image.open(disp_image_dir))
+        #
+        # disp_img = disp_img / 256
+        # depth_img = bf / disp_img
         # print img_depth
         # print np.max(img_depth), np.min(img_depth)
 
         # print "i is :", i, len(ap_pos[i])
-        flag_v = 0
-        if len(ap_pos[i]) == 0:
-            vvv.append(0)
-            continue
+
         for line in (ap_pos[i]):
             line = line.split(' ')
             car_id = int(line[0])
@@ -204,91 +187,22 @@ def draw_points(camera_traj, ap_pos):
             right = int(line[3])
             bottom = int(line[4])
 
-            if car_id != 4:
-                continue
+            # if car_id != 4:
+            #     continue
             flag_v = 1
+
+            # print "car_id is :", car_id
+            dep = cal_depth((left + right)/2, bottom)
+            print car_id, dep
+            z = dep
+
             total_x = 0.0
             total_y = 0.0
             cnt = 0.0
-            # print "car_id is :", car_id
-            para_k = 0
-            vv = bottom
-            # dep = 1.4 * fy / (para_k*fy+cy -vv)
-            a = 821.816137998
-            #567.836540996
-            b = 277.373259526
-            #279.113381375
-            dep = a / (vv - b)
-            if dep < 0:
-                dep = -1*dep
-            # resd = 28.0 / 112.0
-            # dep = 32.0 - (i*1.0 - 208.0)*resd
-            # dep = 72 - ori_y
-            z = dep
-            print "v is : ", vv, "  depth is : ", z
-            vvv.append(vv)
-
-            list_res = get_3d_wcor(bottom, (left + right)/2, z, rwc, ow)
-            total_x = list_res[0][0]
-            total_y = list_res[2][0]
+            total_x, total_y = get_3d_wcor(bottom, (left + right)/2, z, rwc, ow)
             print "person y is : ", total_y
             cnt = 1
-            # depth_list = []
-            # for u in range(top, bottom):
-            #     for v in range(left, right):
-            #         depth_list.append(depth_img[u][v])
-            # depth_set = set(depth_list)
-            # mx = 0
-            # for item in depth_set:
-            #     mx = max(mx, depth_list.count(item))
-            #     # print item, depth_list.count(item)
-            # key = -1
-            # for item in depth_set:
-            #     if depth_list.count(item) == mx:
-            #         key = item
-            #
-            # flag_key = 0
-            # for m in lens:
-            #     index = m.index
-            #     print index
-            #     if index == car_id:
-            #         flag_key = 1
-            #         if m.length-key > 4.0 or key-m.length > 4.0:
-            #             key = m.length
-            #         else:
-            #             m.length = key
-            # if flag_key == 0:
-            #     new_len = Len(car_id, key)
-            #     lens.append(new_len)
-            # if pre_key == -1:
-            #     pre_key = key
-            # else:
-            #     if key-pre_key > 1.0 or pre_key-key > 1.0:
-            #         key = pre_key
-            #     else:
-            #         pre_key = key
-            # print "key is : ", key
-            # z = depth_img[(top+bottom)/2][(left+right)/2]
-            # z = 5
-            # print "z is: ", z
-            # list_res = get_3d_wcor(u, v, z, rwc, ow)
-            # total_x += list_res[0][0]
-            # total_y += list_res[2][0]
-            # cnt += 1.0
-            # for u in range(top, bottom):
-            #     for v in range(left, right):
-            #         z = depth_img[u][v]
-            #         z = key
-            #         list_res = get_3d_wcor(u, v, z, rwc, ow)
-            #         total_x += list_res[0][0]
-            #         total_y += list_res[2][0]
-            #         cnt += 1.0
-                    # if z-key < 1.0 or key-z < 1.0:
-                    #     list_res = get_3d_wcor(u, v, z, rwc, ow)
-                    #     total_x += list_res[0][0]
-                    #     total_y += list_res[2][0]
-                    #     cnt += 1.0
-                        # print z
+
             if cnt == 0:
                 continue
             flag = 0
@@ -298,21 +212,31 @@ def draw_points(camera_traj, ap_pos):
                 # print "index is : ", index, "car_id is : ", car_id
                 if index == car_id:
                     flag = 1
-                    m.cor_x.append(total_x / cnt)
-                    m.cor_y.append(total_y / cnt)
+                    m.cor_x.append(total_x/cnt)
+                    m.cor_y.append(total_y/cnt)
+                    m.pic_x.append((left+right)/2)
+                    m.pic_y.append(bottom)
+                    m.rw.append(rwc)
+                    m.o.append(ow)
+                    m.cnt = m.cnt + 1
+                    if m.cnt > 2:
+                        print "fit!!!"
+                        r = curve_fit(f_2, m.pic_x, m.pic_y)[0]
+                        if len(r) > 0:
+                            for ind in xrange(len(m.pic_x)):
+                                m.pic_y[ind] = r[0] * m.pic_x[ind] * m.pic_x[ind] + r[1] * m.pic_x[ind] + r[2]
+                                m.cor_x[ind], m.cor_y[ind] = get_3d_wcor(m.pic_y[ind], m.pic_x[ind], m.depth, \
+                                                                         m.rw[ind], m.o[ind])
                     plt.plot(m.cor_x[0:], m.cor_y[0:], c=color[m.color])
                     plt.scatter(x=m.cor_x[-1], y=m.cor_y[-1], c=color[m.color], marker='o')
                     break
             if flag == 0:
                 # print "flag = 0 car_id is: ", car_id
-                new_car = Cars(color_id, car_id, total_x / cnt, total_y / cnt)
+                new_car = Cars(color_id, car_id, total_x / cnt, total_y / cnt, (left+right)/2, bottom, dep, rwc, ow)
                 plt.scatter(x=new_car.cor_x[0:], y=new_car.cor_y[0:], c=color[new_car.color], marker='o')
                 cars.append(new_car)
                 color_id += 1
                 color_id = color_id % 12
-
-        if flag_v == 0:
-            vvv.append(0)
 
         for m in cars:
             flag2 = 0
@@ -327,10 +251,10 @@ def draw_points(camera_traj, ap_pos):
         plt.pause(sleep_t)
         plt.clf()
 
-        file_dir = './sz_time/image1002/'
+        file_dir = './sz_time/ped1102/'
         image_name = '{:0>6d}.png'.format(i)
         img = mpimg.imread(path.join(file_dir, image_name))
-        plt.axis([0, 801, 456, 0])
+        plt.axis([0, 800, 456, 0])
         plt.imshow(img, cmap='gray')
 
         ap_left = []
@@ -339,6 +263,7 @@ def draw_points(camera_traj, ap_pos):
         ap_bottom = []
         for line in (ap_pos[i]):
             line = line.split(' ')
+            car_id = int(line[0])
             left = float(line[1])
             top = float(line[2])
             right = float(line[3])
@@ -347,6 +272,11 @@ def draw_points(camera_traj, ap_pos):
             ap_top.append(top)
             ap_right.append(right)
             ap_bottom.append(bottom)
+            for m in cars:
+                index = m.index
+                # print "index is : ", index, "car_id is : ", car_id
+                if index == car_id:
+                    plt.plot(m.pic_x[0:], m.pic_y[0:], c=color[m.color])
         ap_len = len(ap_top)
         for k in range(ap_len):
             left = ap_left[k]
@@ -370,25 +300,11 @@ def draw_points(camera_traj, ap_pos):
             plt.plot([p4[0], p2[0]], [p4[1], p2[1]], c='green')
             plt.plot([p4[0], p3[0]], [p4[1], p3[1]], c='green')
 
-        # fig3 = plt.figure(3)
-        # plt.pause(sleep_t)
-        # plt.clf()
-        # plt.plot(idd[0:], speed[0:])
-
-        # fig3 = plt.figure(3)
-        # plt.axis([0, 801, 456, 0])
-        # plt.pause(sleep_t)
-        # plt.clf()
-        # disp_file_dir = r'./sz_time/disp_1002_resize/'
-        # disp_image_name = '{:0>6d}.png'.format(i)
-        # img = mpimg.imread(path.join(disp_file_dir, disp_image_name))
-        # plt.imshow(img, cmap='gray')
-
     plt.show()
 
 def main():
-    camera_file = r'./sz_time/slamout_1002.txt'
-    ap_file = r'./sz_time/ap1002.txt'
+    camera_file = r'./sz_time/ped_1102.txt'
+    ap_file = r'./sz_time/ap_1102.txt'
     camera_traj = get_camera_traj(camera_file)
     ap_pos = get_ap_info(ap_file)
     draw_points(camera_traj, ap_pos)

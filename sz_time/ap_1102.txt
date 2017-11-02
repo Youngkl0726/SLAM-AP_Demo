@@ -1,0 +1,335 @@
+start proc frame 0
+0 451 268 473 306
+start proc frame 1
+start proc frame 2
+0 455 267 474 308
+start proc frame 3
+start proc frame 4
+start proc frame 5
+start proc frame 6
+start proc frame 7
+start proc frame 8
+start proc frame 9
+start proc frame 10
+start proc frame 11
+start proc frame 12
+start proc frame 13
+start proc frame 14
+start proc frame 15
+0 472 266 493 309
+start proc frame 16
+0 472 265 493 309
+start proc frame 17
+0 474 264 495 309
+start proc frame 18
+0 475 264 496 309
+start proc frame 19
+0 476 264 497 309
+start proc frame 20
+0 477 264 498 309
+start proc frame 21
+0 478 264 498 310
+start proc frame 22
+start proc frame 23
+start proc frame 24
+start proc frame 25
+start proc frame 26
+start proc frame 27
+start proc frame 28
+start proc frame 29
+start proc frame 30
+0 490 266 510 311
+start proc frame 31
+0 491 266 511 312
+start proc frame 32
+0 493 267 513 312
+start proc frame 33
+start proc frame 34
+start proc frame 35
+start proc frame 36
+start proc frame 37
+start proc frame 38
+start proc frame 39
+start proc frame 40
+start proc frame 41
+start proc frame 42
+start proc frame 43
+start proc frame 44
+start proc frame 45
+start proc frame 46
+start proc frame 47
+start proc frame 48
+start proc frame 49
+start proc frame 50
+start proc frame 51
+start proc frame 52
+start proc frame 53
+start proc frame 54
+start proc frame 55
+start proc frame 56
+start proc frame 57
+start proc frame 58
+start proc frame 59
+start proc frame 60
+start proc frame 61
+start proc frame 62
+start proc frame 63
+start proc frame 64
+start proc frame 65
+start proc frame 66
+start proc frame 67
+0 567 264 587 310
+start proc frame 68
+0 569 265 590 313
+4 445 261 463 300
+start proc frame 69
+0 571 268 592 317
+4 444 261 463 300
+start proc frame 70
+0 572 268 594 318
+start proc frame 71
+0 575 268 597 318
+start proc frame 72
+0 577 267 600 319
+start proc frame 73
+0 579 268 602 320
+start proc frame 74
+start proc frame 75
+start proc frame 76
+start proc frame 77
+start proc frame 78
+start proc frame 79
+start proc frame 80
+start proc frame 81
+start proc frame 82
+start proc frame 83
+start proc frame 84
+start proc frame 85
+4 426 259 446 300
+start proc frame 86
+4 425 259 445 301
+start proc frame 87
+start proc frame 88
+start proc frame 89
+start proc frame 90
+start proc frame 91
+start proc frame 92
+start proc frame 93
+start proc frame 94
+start proc frame 95
+start proc frame 96
+start proc frame 97
+start proc frame 98
+12 664 259 707 345
+4 411 261 431 305
+start proc frame 99
+12 666 260 712 346
+start proc frame 100
+12 672 260 717 347
+4 407 260 429 305
+start proc frame 101
+12 677 260 722 347
+start proc frame 102
+12 684 260 726 345
+start proc frame 103
+12 689 257 730 343
+start proc frame 104
+12 696 257 736 341
+start proc frame 105
+12 703 256 741 340
+start proc frame 106
+12 709 257 746 342
+start proc frame 107
+12 716 257 753 343
+start proc frame 108
+12 723 257 759 344
+start proc frame 109
+12 730 258 766 345
+start proc frame 110
+12 737 258 773 347
+start proc frame 111
+12 743 259 780 349
+start proc frame 112
+12 748 262 786 351
+start proc frame 113
+12 754 263 793 353
+start proc frame 114
+12 759 264 799 356
+start proc frame 115
+4 385 258 408 306
+start proc frame 116
+start proc frame 117
+4 383 257 407 306
+start proc frame 118
+4 380 256 405 306
+start proc frame 119
+4 378 256 403 307
+start proc frame 120
+4 377 256 403 307
+start proc frame 121
+4 375 257 401 309
+start proc frame 122
+4 374 258 400 310
+start proc frame 123
+start proc frame 124
+start proc frame 125
+4 371 259 398 313
+start proc frame 126
+start proc frame 127
+start proc frame 128
+start proc frame 129
+start proc frame 130
+start proc frame 131
+start proc frame 132
+start proc frame 133
+4 353 258 379 314
+start proc frame 134
+4 350 257 377 314
+start proc frame 135
+start proc frame 136
+4 345 256 373 315
+start proc frame 137
+start proc frame 138
+4 340 255 370 316
+start proc frame 139
+4 338 254 368 316
+start proc frame 140
+4 337 256 367 318
+start proc frame 141
+4 335 254 366 318
+start proc frame 142
+4 334 253 364 317
+start proc frame 143
+4 333 251 363 316
+start proc frame 144
+4 331 251 361 316
+start proc frame 145
+4 329 251 359 316
+start proc frame 146
+4 327 248 357 315
+start proc frame 147
+4 325 247 354 315
+start proc frame 148
+start proc frame 149
+start proc frame 150
+start proc frame 151
+4 315 250 344 320
+start proc frame 152
+4 311 249 341 320
+start proc frame 153
+4 308 249 339 321
+start proc frame 154
+4 305 250 337 323
+start proc frame 155
+4 303 249 335 324
+start proc frame 156
+4 300 248 334 324
+start proc frame 157
+4 296 248 331 325
+start proc frame 158
+4 293 247 329 326
+start proc frame 159
+4 291 245 328 326
+start proc frame 160
+4 289 243 326 326
+start proc frame 161
+4 286 242 324 326
+start proc frame 162
+4 285 241 323 327
+start proc frame 163
+4 282 240 320 327
+start proc frame 164
+4 279 239 318 327
+start proc frame 165
+4 276 238 314 328
+start proc frame 166
+start proc frame 167
+4 268 236 306 330
+start proc frame 168
+4 265 235 302 330
+start proc frame 169
+4 261 237 299 333
+start proc frame 170
+4 257 237 295 335
+start proc frame 171
+4 253 237 292 337
+start proc frame 172
+4 249 238 289 339
+start proc frame 173
+4 244 237 286 340
+start proc frame 174
+4 240 237 283 342
+start proc frame 175
+4 236 239 279 345
+start proc frame 176
+4 231 239 275 347
+start proc frame 177
+4 226 238 271 347
+start proc frame 178
+4 221 236 267 346
+start proc frame 179
+start proc frame 180
+4 210 231 258 347
+start proc frame 181
+4 205 231 252 350
+start proc frame 182
+4 199 234 247 355
+start proc frame 183
+start proc frame 184
+start proc frame 185
+start proc frame 186
+start proc frame 187
+start proc frame 188
+4 153 253 202 375
+start proc frame 189
+start proc frame 190
+4 131 252 183 381
+start proc frame 191
+4 119 249 172 381
+start proc frame 192
+4 106 248 161 384
+start proc frame 193
+start proc frame 194
+4 84 255 141 395
+start proc frame 195
+start proc frame 196
+start proc frame 197
+start proc frame 198
+start proc frame 199
+start proc frame 200
+start proc frame 201
+start proc frame 202
+start proc frame 203
+start proc frame 204
+start proc frame 205
+start proc frame 206
+start proc frame 207
+start proc frame 208
+start proc frame 209
+start proc frame 210
+start proc frame 211
+start proc frame 212
+start proc frame 213
+start proc frame 214
+start proc frame 215
+start proc frame 216
+start proc frame 217
+start proc frame 218
+start proc frame 219
+start proc frame 220
+start proc frame 221
+start proc frame 222
+start proc frame 223
+start proc frame 224
+start proc frame 225
+start proc frame 226
+start proc frame 227
+start proc frame 228
+start proc frame 229
+start proc frame 230
+start proc frame 231
+start proc frame 232
+start proc frame 233
+start proc frame 234
+start proc frame 235
+start proc frame 236
