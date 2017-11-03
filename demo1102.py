@@ -37,14 +37,14 @@ invfy = 1.0 / fy
 
 # get R&t from file
 def get_camera_traj(filename):
-    camera_traj = [[] for i in range(237)]
+    camera_traj = [[] for i in range(236)]
     camera_file = open(filename)
     id = -1
     cnt = 0
     flag = 0
     num_r = 0
     line = ""
-    for i in range(3930):
+    for i in range(4445):
         camera_line = camera_file.readline()
         camera_line = camera_line.strip()
         li = camera_line.split(" ")
@@ -72,8 +72,8 @@ def get_camera_traj(filename):
 def get_ap_info(filename):
     ap_file = open(filename)
     ap_num = -1
-    ap_pos = [[] for i in range(237)]
-    for i in range(335):
+    ap_pos = [[] for i in range(236)]
+    for i in range(334):
         ap_line = ap_file.readline()
         ap_line = ap_line.strip()
         if ap_line[0] == 's':
@@ -124,7 +124,7 @@ def draw_points(camera_traj, ap_pos):
     color_id = 0
     x_p = []
     y_p = []
-    for i in range(237):
+    for i in range(236):
         # idd.append(i)
         print "i is : ", i
         fig1 = plt.figure(1)
@@ -160,21 +160,21 @@ def draw_points(camera_traj, ap_pos):
         y_p.append(ow_list[2])
         print "camera is : ", ow_list[0], ow_list[2]
 
-        plt.axis([-6, 6, 0, 25])
+        plt.axis([-6, 6, 0, 40])
         plt.scatter(x=x_p[i], y=y_p[i], marker='o')
         plt.plot(x_p[0:i], y_p[0:i])
         existing_ids = []
 
         # Get depth map
-        # disp_img_dir = './sz_time/disp_1002_resize/'
-        # img_name = '{:0>6d}.png'.format(i)
-        # disp_image_dir = path.join(disp_img_dir, img_name)
-        # disp_img = np.array(Image.open(disp_image_dir))
-        #
-        # disp_img = disp_img / 256
-        # depth_img = bf / disp_img
+        disp_img_dir = './sz_time/disp_1103_resize/'
+        img_name = '{:0>6d}.png'.format(i)
+        disp_image_dir = path.join(disp_img_dir, img_name)
+        disp_img = np.array(Image.open(disp_image_dir))
+
+        disp_img = disp_img / 256
+        depth_img = bf / disp_img
         # print img_depth
-        # print np.max(img_depth), np.min(img_depth)
+        print np.max(depth_img), np.min(depth_img)
 
         # print "i is :", i, len(ap_pos[i])
 
@@ -190,6 +190,16 @@ def draw_points(camera_traj, ap_pos):
             # if car_id != 4:
             #     continue
             flag_v = 1
+            ped_dep = []
+            depth_total = 0
+            depth_num = 0
+            for u in range(top, bottom):
+                for v in range(left, right):
+                    d = depth_img[u][v]
+                    depth_total += d
+                    depth_num += 1
+                    ped_dep.append(d)
+            print "max/min is: ", max(ped_dep), min(ped_dep), depth_total/depth_num
 
             # print "car_id is :", car_id
             dep = cal_depth((left + right)/2, bottom)
@@ -251,7 +261,7 @@ def draw_points(camera_traj, ap_pos):
         plt.pause(sleep_t)
         plt.clf()
 
-        file_dir = './sz_time/ped1102/'
+        file_dir = './sz_time/ped1103/'
         image_name = '{:0>6d}.png'.format(i)
         img = mpimg.imread(path.join(file_dir, image_name))
         plt.axis([0, 800, 456, 0])
@@ -303,8 +313,8 @@ def draw_points(camera_traj, ap_pos):
     plt.show()
 
 def main():
-    camera_file = r'./sz_time/ped_1102.txt'
-    ap_file = r'./sz_time/ap_1102.txt'
+    camera_file = r'./sz_time/ped_1103.txt'
+    ap_file = r'./sz_time/ap_1103.txt'
     camera_traj = get_camera_traj(camera_file)
     ap_pos = get_ap_info(ap_file)
     draw_points(camera_traj, ap_pos)
