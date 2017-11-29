@@ -21,9 +21,9 @@
 #     txt_file.write(left_file + ' ' + right_file + '\n')
 # txt_file.close()
 
-txt_file = open('final_30000.txt', 'wb')
+txt_file = open('final_20000.txt', 'wb')
 file = open('final.txt')
-for i in xrange(30000):
+for i in xrange(20000):
     line = file.readline()
     line = line.strip()
     print line
