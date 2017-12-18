@@ -4,6 +4,7 @@ from os import path
 import numpy as np
 from PIL import Image
 import cv2
+
 # def convert_disps_to_depths_kitti(pred_disparities):
 #     gt_depths = []
 #     pred_depths = []
@@ -28,7 +29,7 @@ import cv2
 # print pred_depths.shape
 # print pred_depths[401][283]
 
-disp_image_dir = ('./monodepth/disparities.npy')
+disp_image_dir = ('./monodepth/disparities_pp4.npy')
 disp = np.load(disp_image_dir)
 print disp.shape
 
@@ -45,25 +46,31 @@ def get_ap_log(filename):
         # print line
         res_line[i].append(int(line[0]))
         res_line[i].append(int(line[1]))
-        res_line[i].append(float(line[18]))
-        res_line[i].append(float(line[19]))
-        res_line[i].append(float(line[20]))
-        res_line[i].append(float(line[21]))
+        res_line[i].append(float(line[6]))
+        res_line[i].append(float(line[7]))
+        res_line[i].append(float(line[8]))
+        res_line[i].append(float(line[9]))
+        # res_line[i].append(float(line[18]))
+        # res_line[i].append(float(line[19]))
+        # res_line[i].append(float(line[20]))
+        # res_line[i].append(float(line[21]))
     # print res_line
     return res_line
 
-bf = 26.0
+bf = 33.0
 
 def draw(ap_res):
     depth = []
     depth_id = []
     depth_num = 0
     sleep_t = 0.001
-    for i in range(3435):
+    for i in xrange(824):
+        if i==823:
+            plt.plot(depth_id[0:], depth[0:], c='blue')
         # print ap_res[i]
         # Get depth map
         person_id = ap_res[i][1]
-        if person_id != 48:
+        if person_id != 8:
             continue
         fig1 = plt.figure(1)
         plt.pause(sleep_t)
@@ -81,17 +88,18 @@ def draw(ap_res):
         mid_y = min(878, mid_y)
 
         z = depth_img[mid_y][mid_x]
-        # if z > 50:
-        #     continue
+        if z > 30:
+            continue
+
         depth.append(z)
         depth_id.append(depth_num)
         depth_num += 1
         plt.plot(depth_id[0:], depth[0:], c='blue')
-    # plt.pause(10)
+    plt.pause(10)
     plt.show()
 
 def main():
-    ap_file = r'./sz2/stillcar.log'
+    ap_file = r'./monodepth/r_4_out.log'
     ap_res = get_ap_log(ap_file)
     draw(ap_res)
 
