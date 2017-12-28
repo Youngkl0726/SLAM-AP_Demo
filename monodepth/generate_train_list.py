@@ -1,11 +1,12 @@
 
 txt_file = open('train.txt', 'wb')
-for i in xrange(414592):
-    left_file = '/mnt/lustre/share/chenkaige/PX-2/rectified/SZ_171127/dw_20171123_082533_0.000000_0.000000/undist/' + '{:0>6d}.png'.format(i)
+for i in xrange(33061):
+    left_file = 'image_0/' + '{:0>6d}.png'.format(i)
     # right_file = 'right/' + '{:0>6d}.png'.format(i)
+    right_file = 'image_1/' + '{:0>6d}.png'.format(i)
     print left_file
-    txt_file.write(left_file+'\n')
-    # txt_file.write(left_file + ' ' + right_file + '\n')
+    # txt_file.write(left_file+'\n')
+    txt_file.write(left_file + ' ' + right_file + '\n')
 txt_file.close()
 
 

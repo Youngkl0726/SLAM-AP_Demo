@@ -42,7 +42,7 @@ def get_ap_log1(filename):
     # print res_line
     return res_line
 
-bf = 295
+bf = 350
 # bf = 100.0
 def draw(ap_res):
     depth = []
@@ -53,12 +53,12 @@ def draw(ap_res):
     point_num = 0
     sleep_t = 0.001
     num = 0
-    disp = [[] for i in xrange(192)]
+    disp = [[] for i in xrange(236)]
     # disp = []
     x = 0.0
-    for i in range(1355):
-        if i < 959 or i > 1354:
-            continue
+    for i in range(493):
+        # if i < 959 or i > 1354:
+        #     continue
 
         person_id = ap_res[i][1]
         if person_id != 0:
@@ -68,7 +68,7 @@ def draw(ap_res):
         # plt.pause(sleep_t)
         # plt.clf()
         pic_id = ap_res[i][0]
-        disp_img_dir = './Stereo/test_1215_disp_resize/'
+        disp_img_dir = './Stereo/test_1215_kitti_disp_resize/'
         img_name = '{:0>6d}.png'.format(pic_id)
         disp_image_dir = path.join(disp_img_dir, img_name)
         disp_img = np.array(Image.open(disp_image_dir))
@@ -125,11 +125,11 @@ def draw(ap_res):
 def get_disp(ap_res, ap_res1):
     num = 0
     x = 0.0
-    disp = [[] for i in xrange(192)]
+    disp = [[] for i in xrange(233)]
     # disp = []
-    for i in range(1355):
-        if i < 959 or i > 1354:
-            continue
+    for i in range(493):
+        # if i < 959 or i > 1354:
+        #     continue
         person_id = ap_res[i][1]
         pic_id = ap_res[i][0]
 
@@ -143,7 +143,7 @@ def get_disp(ap_res, ap_res1):
         mid_y = int((point1_y + point2_y) / 2)
         mid_x = min(1846, mid_x)
         mid_y = min(1083, mid_y)
-        for j in range(1368):
+        for j in range(494):
             person_id1 = ap_res1[j][1]
             pic_id1 = ap_res1[j][0]
             if pic_id == pic_id1 and person_id == 0 and 0 == person_id1:
@@ -185,12 +185,12 @@ def main():
     disp = []
     total = 0.0
     num = 0
-    for i in xrange(192):
+    for i in xrange(197):
         fig1 = plt.figure(1)
         plt.pause(sleep_t)
         plt.clf()
         # print i, abs(disp1[i]-disp2[i])
-        for j in xrange(192):
+        for j in xrange(198):
             # print disp2[j][0]
             if disp1[i][0] == disp2[j][0]:
                 # print disp1[i][0], disp2[j][0]
@@ -213,12 +213,16 @@ def main():
 
     # manually
 
-    # disp_img = np.array(Image.open('./Stereo/test_1215_disp_resize/000000.png'))/(8.0*16.0)
-    # disp_img1 = np.array(Image.open('./Stereo/test_1215_disp_resize/000049.png')) / (8.0*16.0)
-    # disp_img2 = np.array(Image.open('./Stereo/test_1215_disp_resize/000100.png')) / (8.0 * 16.0)
-    # print disp_img[538][688]
-    # print disp_img1[539][990]
-    # print disp_img2[539][1345]
+    # disp_img = np.array(Image.open('./Stereo/test_1215_disp_resize/000589.png'))/(16.0*16.0)
+    # disp_img1 = np.array(Image.open('./Stereo/test_1215_disp_resize/000659.png')) / (16.0*16.0)
+    # disp_img2 = np.array(Image.open('./Stereo/test_1215_disp_resize/000720.png')) / (16.0 * 16.0)
+    #
+    # # disp_img = np.array(Image.open('./Stereo/disp/000589.png')) / (16.0 * 16.0)
+    # # disp_img1 = np.array(Image.open('./Stereo/disp/000659.png')) / (16.0 * 16.0)
+    # # disp_img2 = np.array(Image.open('./Stereo/disp/000720.png')) / (16.0 * 16.0)
+    # print disp_img[565][794], disp_img1[566][1020], disp_img2[566][1231]
+    # # print disp_img1[566][1031]
+    # # print disp_img2[566][1359]
 
 
 if __name__ == '__main__':
