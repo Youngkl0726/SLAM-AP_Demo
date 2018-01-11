@@ -2,284 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="56ba1bc5-a074-4fd9-8dde-6ae8178fa221" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/disp_test.py" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Stereo/r_l_out.log" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/sz2/stillcar.log" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Stereo/test_1215_disp_resize/000000.png" afterPath="$PROJECT_DIR$/Stereo/test_1215_disp_resize/000000.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Stereo/test_1215_disp_resize/000001.png" afterPath="$PROJECT_DIR$/Stereo/test_1215_disp_resize/000001.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Stereo/test_1215_disp_resize/000002.png" afterPath="$PROJECT_DIR$/Stereo/test_1215_disp_resize/000002.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Stereo/test_1215_disp_resize/000003.png" afterPath="$PROJECT_DIR$/Stereo/test_1215_disp_resize/000003.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Stereo/test_1215_disp_resize/000004.png" afterPath="$PROJECT_DIR$/Stereo/test_1215_disp_resize/000004.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Stereo/test_1215_disp_resize/000005.png" afterPath="$PROJECT_DIR$/Stereo/test_1215_disp_resize/000005.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Stereo/test_1215_disp_resize/000006.png" afterPath="$PROJECT_DIR$/Stereo/test_1215_disp_resize/000006.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Stereo/test_1215_disp_resize/000007.png" afterPath="$PROJECT_DIR$/Stereo/test_1215_disp_resize/000007.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Stereo/test_1215_disp_resize/000008.png" afterPath="$PROJECT_DIR$/Stereo/test_1215_disp_resize/000008.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Stereo/test_1215_disp_resize/000009.png" afterPath="$PROJECT_DIR$/Stereo/test_1215_disp_resize/000009.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Stereo/test_1215_disp_resize/000010.png" afterPath="$PROJECT_DIR$/Stereo/test_1215_disp_resize/000010.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Stereo/test_1215_disp_resize/000011.png" afterPath="$PROJECT_DIR$/Stereo/test_1215_disp_resize/000011.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Stereo/test_1215_disp_resize/000012.png" afterPath="$PROJECT_DIR$/Stereo/test_1215_disp_resize/000012.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Stereo/test_1215_disp_resize/000013.png" afterPath="$PROJECT_DIR$/Stereo/test_1215_disp_resize/000013.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Stereo/test_1215_disp_resize/000014.png" afterPath="$PROJECT_DIR$/Stereo/test_1215_disp_resize/000014.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Stereo/test_1215_disp_resize/000015.png" afterPath="$PROJECT_DIR$/Stereo/test_1215_disp_resize/000015.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Stereo/test_1215_disp_resize/000016.png" afterPath="$PROJECT_DIR$/Stereo/test_1215_disp_resize/000016.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Stereo/test_1215_disp_resize/000017.png" afterPath="$PROJECT_DIR$/Stereo/test_1215_disp_resize/000017.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Stereo/test_1215_disp_resize/000018.png" afterPath="$PROJECT_DIR$/Stereo/test_1215_disp_resize/000018.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Stereo/test_1215_disp_resize/000019.png" afterPath="$PROJECT_DIR$/Stereo/test_1215_disp_resize/000019.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Stereo/test_1215_disp_resize/000020.png" afterPath="$PROJECT_DIR$/Stereo/test_1215_disp_resize/000020.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Stereo/test_1215_disp_resize/000021.png" afterPath="$PROJECT_DIR$/Stereo/test_1215_disp_resize/000021.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Stereo/test_1215_disp_resize/000022.png" afterPath="$PROJECT_DIR$/Stereo/test_1215_disp_resize/000022.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Stereo/test_1215_disp_resize/000023.png" afterPath="$PROJECT_DIR$/Stereo/test_1215_disp_resize/000023.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Stereo/test_1215_disp_resize/000024.png" afterPath="$PROJECT_DIR$/Stereo/test_1215_disp_resize/000024.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Stereo/test_1215_disp_resize/000025.png" afterPath="$PROJECT_DIR$/Stereo/test_1215_disp_resize/000025.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Stereo/test_1215_disp_resize/000026.png" afterPath="$PROJECT_DIR$/Stereo/test_1215_disp_resize/000026.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Stereo/test_1215_disp_resize/000027.png" afterPath="$PROJECT_DIR$/Stereo/test_1215_disp_resize/000027.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Stereo/test_1215_disp_resize/000028.png" afterPath="$PROJECT_DIR$/Stereo/test_1215_disp_resize/000028.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Stereo/test_1215_disp_resize/000029.png" afterPath="$PROJECT_DIR$/Stereo/test_1215_disp_resize/000029.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Stereo/test_1215_disp_resize/000030.png" afterPath="$PROJECT_DIR$/Stereo/test_1215_disp_resize/000030.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Stereo/test_1215_disp_resize/000031.png" afterPath="$PROJECT_DIR$/Stereo/test_1215_disp_resize/000031.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Stereo/test_1215_disp_resize/000032.png" afterPath="$PROJECT_DIR$/Stereo/test_1215_disp_resize/000032.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Stereo/test_1215_disp_resize/000033.png" afterPath="$PROJECT_DIR$/Stereo/test_1215_disp_resize/000033.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Stereo/test_1215_disp_resize/000034.png" afterPath="$PROJECT_DIR$/Stereo/test_1215_disp_resize/000034.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Stereo/test_1215_disp_resize/000035.png" afterPath="$PROJECT_DIR$/Stereo/test_1215_disp_resize/000035.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Stereo/test_1215_disp_resize/000036.png" afterPath="$PROJECT_DIR$/Stereo/test_1215_disp_resize/000036.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Stereo/test_1215_disp_resize/000037.png" afterPath="$PROJECT_DIR$/Stereo/test_1215_disp_resize/000037.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Stereo/test_1215_disp_resize/000038.png" afterPath="$PROJECT_DIR$/Stereo/test_1215_disp_resize/000038.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Stereo/test_1215_disp_resize/000039.png" afterPath="$PROJECT_DIR$/Stereo/test_1215_disp_resize/000039.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Stereo/test_1215_disp_resize/000040.png" afterPath="$PROJECT_DIR$/Stereo/test_1215_disp_resize/000040.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Stereo/test_1215_disp_resize/000041.png" afterPath="$PROJECT_DIR$/Stereo/test_1215_disp_resize/000041.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Stereo/test_1215_disp_resize/000042.png" afterPath="$PROJECT_DIR$/Stereo/test_1215_disp_resize/000042.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Stereo/test_1215_disp_resize/000043.png" afterPath="$PROJECT_DIR$/Stereo/test_1215_disp_resize/000043.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Stereo/test_1215_disp_resize/000044.png" afterPath="$PROJECT_DIR$/Stereo/test_1215_disp_resize/000044.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Stereo/test_1215_disp_resize/000045.png" afterPath="$PROJECT_DIR$/Stereo/test_1215_disp_resize/000045.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Stereo/test_1215_disp_resize/000046.png" afterPath="$PROJECT_DIR$/Stereo/test_1215_disp_resize/000046.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Stereo/test_1215_disp_resize/000047.png" afterPath="$PROJECT_DIR$/Stereo/test_1215_disp_resize/000047.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Stereo/test_1215_disp_resize/000048.png" afterPath="$PROJECT_DIR$/Stereo/test_1215_disp_resize/000048.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Stereo/test_1215_disp_resize/000049.png" afterPath="$PROJECT_DIR$/Stereo/test_1215_disp_resize/000049.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Stereo/test_1215_disp_resize/000050.png" afterPath="$PROJECT_DIR$/Stereo/test_1215_disp_resize/000050.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Stereo/test_1215_disp_resize/000051.png" afterPath="$PROJECT_DIR$/Stereo/test_1215_disp_resize/000051.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Stereo/test_1215_disp_resize/000052.png" afterPath="$PROJECT_DIR$/Stereo/test_1215_disp_resize/000052.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Stereo/test_1215_disp_resize/000053.png" afterPath="$PROJECT_DIR$/Stereo/test_1215_disp_resize/000053.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Stereo/test_1215_disp_resize/000054.png" afterPath="$PROJECT_DIR$/Stereo/test_1215_disp_resize/000054.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Stereo/test_1215_disp_resize/000055.png" afterPath="$PROJECT_DIR$/Stereo/test_1215_disp_resize/000055.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Stereo/test_1215_disp_resize/000056.png" afterPath="$PROJECT_DIR$/Stereo/test_1215_disp_resize/000056.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Stereo/test_1215_disp_resize/000057.png" afterPath="$PROJECT_DIR$/Stereo/test_1215_disp_resize/000057.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Stereo/test_1215_disp_resize/000058.png" afterPath="$PROJECT_DIR$/Stereo/test_1215_disp_resize/000058.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Stereo/test_1215_disp_resize/000059.png" afterPath="$PROJECT_DIR$/Stereo/test_1215_disp_resize/000059.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Stereo/test_1215_disp_resize/000060.png" afterPath="$PROJECT_DIR$/Stereo/test_1215_disp_resize/000060.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Stereo/test_1215_disp_resize/000061.png" afterPath="$PROJECT_DIR$/Stereo/test_1215_disp_resize/000061.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Stereo/test_1215_disp_resize/000062.png" afterPath="$PROJECT_DIR$/Stereo/test_1215_disp_resize/000062.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Stereo/test_1215_disp_resize/000063.png" afterPath="$PROJECT_DIR$/Stereo/test_1215_disp_resize/000063.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Stereo/test_1215_disp_resize/000064.png" afterPath="$PROJECT_DIR$/Stereo/test_1215_disp_resize/000064.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Stereo/test_1215_disp_resize/000065.png" afterPath="$PROJECT_DIR$/Stereo/test_1215_disp_resize/000065.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Stereo/test_1215_disp_resize/000066.png" afterPath="$PROJECT_DIR$/Stereo/test_1215_disp_resize/000066.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Stereo/test_1215_disp_resize/000067.png" afterPath="$PROJECT_DIR$/Stereo/test_1215_disp_resize/000067.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Stereo/test_1215_disp_resize/000068.png" afterPath="$PROJECT_DIR$/Stereo/test_1215_disp_resize/000068.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Stereo/test_1215_disp_resize/000069.png" afterPath="$PROJECT_DIR$/Stereo/test_1215_disp_resize/000069.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Stereo/test_1215_disp_resize/000070.png" afterPath="$PROJECT_DIR$/Stereo/test_1215_disp_resize/000070.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Stereo/test_1215_disp_resize/000071.png" afterPath="$PROJECT_DIR$/Stereo/test_1215_disp_resize/000071.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Stereo/test_1215_disp_resize/000072.png" afterPath="$PROJECT_DIR$/Stereo/test_1215_disp_resize/000072.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Stereo/test_1215_disp_resize/000073.png" afterPath="$PROJECT_DIR$/Stereo/test_1215_disp_resize/000073.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Stereo/test_1215_disp_resize/000074.png" afterPath="$PROJECT_DIR$/Stereo/test_1215_disp_resize/000074.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Stereo/test_1215_disp_resize/000075.png" afterPath="$PROJECT_DIR$/Stereo/test_1215_disp_resize/000075.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Stereo/test_1215_disp_resize/000076.png" afterPath="$PROJECT_DIR$/Stereo/test_1215_disp_resize/000076.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Stereo/test_1215_disp_resize/000077.png" afterPath="$PROJECT_DIR$/Stereo/test_1215_disp_resize/000077.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Stereo/test_1215_disp_resize/000078.png" afterPath="$PROJECT_DIR$/Stereo/test_1215_disp_resize/000078.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Stereo/test_1215_disp_resize/000079.png" afterPath="$PROJECT_DIR$/Stereo/test_1215_disp_resize/000079.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Stereo/test_1215_disp_resize/000080.png" afterPath="$PROJECT_DIR$/Stereo/test_1215_disp_resize/000080.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Stereo/test_1215_disp_resize/000081.png" afterPath="$PROJECT_DIR$/Stereo/test_1215_disp_resize/000081.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Stereo/test_1215_disp_resize/000082.png" afterPath="$PROJECT_DIR$/Stereo/test_1215_disp_resize/000082.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Stereo/test_1215_disp_resize/000083.png" afterPath="$PROJECT_DIR$/Stereo/test_1215_disp_resize/000083.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Stereo/test_1215_disp_resize/000084.png" afterPath="$PROJECT_DIR$/Stereo/test_1215_disp_resize/000084.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Stereo/test_1215_disp_resize/000085.png" afterPath="$PROJECT_DIR$/Stereo/test_1215_disp_resize/000085.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Stereo/test_1215_disp_resize/000086.png" afterPath="$PROJECT_DIR$/Stereo/test_1215_disp_resize/000086.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Stereo/test_1215_disp_resize/000087.png" afterPath="$PROJECT_DIR$/Stereo/test_1215_disp_resize/000087.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Stereo/test_1215_disp_resize/000088.png" afterPath="$PROJECT_DIR$/Stereo/test_1215_disp_resize/000088.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Stereo/test_1215_disp_resize/000089.png" afterPath="$PROJECT_DIR$/Stereo/test_1215_disp_resize/000089.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Stereo/test_1215_disp_resize/000090.png" afterPath="$PROJECT_DIR$/Stereo/test_1215_disp_resize/000090.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Stereo/test_1215_disp_resize/000091.png" afterPath="$PROJECT_DIR$/Stereo/test_1215_disp_resize/000091.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Stereo/test_1215_disp_resize/000092.png" afterPath="$PROJECT_DIR$/Stereo/test_1215_disp_resize/000092.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Stereo/test_1215_disp_resize/000093.png" afterPath="$PROJECT_DIR$/Stereo/test_1215_disp_resize/000093.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Stereo/test_1215_disp_resize/000094.png" afterPath="$PROJECT_DIR$/Stereo/test_1215_disp_resize/000094.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Stereo/test_1215_disp_resize/000095.png" afterPath="$PROJECT_DIR$/Stereo/test_1215_disp_resize/000095.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Stereo/test_1215_disp_resize/000096.png" afterPath="$PROJECT_DIR$/Stereo/test_1215_disp_resize/000096.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Stereo/test_1215_disp_resize/000097.png" afterPath="$PROJECT_DIR$/Stereo/test_1215_disp_resize/000097.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Stereo/test_1215_disp_resize/000098.png" afterPath="$PROJECT_DIR$/Stereo/test_1215_disp_resize/000098.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Stereo/test_1215_disp_resize/000099.png" afterPath="$PROJECT_DIR$/Stereo/test_1215_disp_resize/000099.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Stereo/test_1215_disp_resize/000100.png" afterPath="$PROJECT_DIR$/Stereo/test_1215_disp_resize/000100.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Stereo/test_1215_disp_resize/000101.png" afterPath="$PROJECT_DIR$/Stereo/test_1215_disp_resize/000101.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Stereo/test_1215_disp_resize/000102.png" afterPath="$PROJECT_DIR$/Stereo/test_1215_disp_resize/000102.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Stereo/test_1215_disp_resize/000103.png" afterPath="$PROJECT_DIR$/Stereo/test_1215_disp_resize/000103.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Stereo/test_1215_disp_resize/000104.png" afterPath="$PROJECT_DIR$/Stereo/test_1215_disp_resize/000104.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Stereo/test_1215_disp_resize/000105.png" afterPath="$PROJECT_DIR$/Stereo/test_1215_disp_resize/000105.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Stereo/test_1215_disp_resize/000106.png" afterPath="$PROJECT_DIR$/Stereo/test_1215_disp_resize/000106.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Stereo/test_1215_disp_resize/000107.png" afterPath="$PROJECT_DIR$/Stereo/test_1215_disp_resize/000107.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Stereo/test_1215_disp_resize/000108.png" afterPath="$PROJECT_DIR$/Stereo/test_1215_disp_resize/000108.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Stereo/test_1215_disp_resize/000109.png" afterPath="$PROJECT_DIR$/Stereo/test_1215_disp_resize/000109.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Stereo/test_1215_disp_resize/000110.png" afterPath="$PROJECT_DIR$/Stereo/test_1215_disp_resize/000110.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Stereo/test_1215_disp_resize/000111.png" afterPath="$PROJECT_DIR$/Stereo/test_1215_disp_resize/000111.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Stereo/test_1215_disp_resize/000112.png" afterPath="$PROJECT_DIR$/Stereo/test_1215_disp_resize/000112.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Stereo/test_1215_disp_resize/000113.png" afterPath="$PROJECT_DIR$/Stereo/test_1215_disp_resize/000113.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Stereo/test_1215_disp_resize/000114.png" afterPath="$PROJECT_DIR$/Stereo/test_1215_disp_resize/000114.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Stereo/test_1215_disp_resize/000115.png" afterPath="$PROJECT_DIR$/Stereo/test_1215_disp_resize/000115.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Stereo/test_1215_disp_resize/000116.png" afterPath="$PROJECT_DIR$/Stereo/test_1215_disp_resize/000116.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Stereo/test_1215_disp_resize/000117.png" afterPath="$PROJECT_DIR$/Stereo/test_1215_disp_resize/000117.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Stereo/test_1215_disp_resize/000118.png" afterPath="$PROJECT_DIR$/Stereo/test_1215_disp_resize/000118.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Stereo/test_1215_disp_resize/000119.png" afterPath="$PROJECT_DIR$/Stereo/test_1215_disp_resize/000119.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Stereo/test_1215_disp_resize/000120.png" afterPath="$PROJECT_DIR$/Stereo/test_1215_disp_resize/000120.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Stereo/test_1215_disp_resize/000121.png" afterPath="$PROJECT_DIR$/Stereo/test_1215_disp_resize/000121.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Stereo/test_1215_disp_resize/000122.png" afterPath="$PROJECT_DIR$/Stereo/test_1215_disp_resize/000122.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Stereo/test_1215_disp_resize/000123.png" afterPath="$PROJECT_DIR$/Stereo/test_1215_disp_resize/000123.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Stereo/test_1215_disp_resize/000124.png" afterPath="$PROJECT_DIR$/Stereo/test_1215_disp_resize/000124.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Stereo/test_1215_disp_resize/000125.png" afterPath="$PROJECT_DIR$/Stereo/test_1215_disp_resize/000125.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Stereo/test_1215_disp_resize/000126.png" afterPath="$PROJECT_DIR$/Stereo/test_1215_disp_resize/000126.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Stereo/test_1215_disp_resize/000127.png" afterPath="$PROJECT_DIR$/Stereo/test_1215_disp_resize/000127.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Stereo/test_1215_disp_resize/000128.png" afterPath="$PROJECT_DIR$/Stereo/test_1215_disp_resize/000128.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Stereo/test_1215_disp_resize/000129.png" afterPath="$PROJECT_DIR$/Stereo/test_1215_disp_resize/000129.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Stereo/test_1215_disp_resize/000130.png" afterPath="$PROJECT_DIR$/Stereo/test_1215_disp_resize/000130.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Stereo/test_1215_disp_resize/000131.png" afterPath="$PROJECT_DIR$/Stereo/test_1215_disp_resize/000131.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Stereo/test_1215_disp_resize/000132.png" afterPath="$PROJECT_DIR$/Stereo/test_1215_disp_resize/000132.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Stereo/test_1215_disp_resize/000133.png" afterPath="$PROJECT_DIR$/Stereo/test_1215_disp_resize/000133.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Stereo/test_1215_disp_resize/000134.png" afterPath="$PROJECT_DIR$/Stereo/test_1215_disp_resize/000134.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Stereo/test_1215_disp_resize/000135.png" afterPath="$PROJECT_DIR$/Stereo/test_1215_disp_resize/000135.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Stereo/test_1215_disp_resize/000136.png" afterPath="$PROJECT_DIR$/Stereo/test_1215_disp_resize/000136.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Stereo/test_1215_disp_resize/000137.png" afterPath="$PROJECT_DIR$/Stereo/test_1215_disp_resize/000137.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Stereo/test_1215_disp_resize/000138.png" afterPath="$PROJECT_DIR$/Stereo/test_1215_disp_resize/000138.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Stereo/test_1215_disp_resize/000139.png" afterPath="$PROJECT_DIR$/Stereo/test_1215_disp_resize/000139.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Stereo/test_1215_disp_resize/000140.png" afterPath="$PROJECT_DIR$/Stereo/test_1215_disp_resize/000140.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Stereo/test_1215_disp_resize/000141.png" afterPath="$PROJECT_DIR$/Stereo/test_1215_disp_resize/000141.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Stereo/test_1215_disp_resize/000142.png" afterPath="$PROJECT_DIR$/Stereo/test_1215_disp_resize/000142.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Stereo/test_1215_disp_resize/000143.png" afterPath="$PROJECT_DIR$/Stereo/test_1215_disp_resize/000143.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Stereo/test_1215_disp_resize/000144.png" afterPath="$PROJECT_DIR$/Stereo/test_1215_disp_resize/000144.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Stereo/test_1215_disp_resize/000145.png" afterPath="$PROJECT_DIR$/Stereo/test_1215_disp_resize/000145.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Stereo/test_1215_disp_resize/000146.png" afterPath="$PROJECT_DIR$/Stereo/test_1215_disp_resize/000146.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Stereo/test_1215_disp_resize/000147.png" afterPath="$PROJECT_DIR$/Stereo/test_1215_disp_resize/000147.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Stereo/test_1215_disp_resize/000148.png" afterPath="$PROJECT_DIR$/Stereo/test_1215_disp_resize/000148.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Stereo/test_1215_disp_resize/000149.png" afterPath="$PROJECT_DIR$/Stereo/test_1215_disp_resize/000149.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Stereo/test_1215_disp_resize/000150.png" afterPath="$PROJECT_DIR$/Stereo/test_1215_disp_resize/000150.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Stereo/test_1215_disp_resize/000151.png" afterPath="$PROJECT_DIR$/Stereo/test_1215_disp_resize/000151.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Stereo/test_1215_disp_resize/000152.png" afterPath="$PROJECT_DIR$/Stereo/test_1215_disp_resize/000152.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Stereo/test_1215_disp_resize/000153.png" afterPath="$PROJECT_DIR$/Stereo/test_1215_disp_resize/000153.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Stereo/test_1215_disp_resize/000154.png" afterPath="$PROJECT_DIR$/Stereo/test_1215_disp_resize/000154.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Stereo/test_1215_disp_resize/000155.png" afterPath="$PROJECT_DIR$/Stereo/test_1215_disp_resize/000155.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Stereo/test_1215_disp_resize/000156.png" afterPath="$PROJECT_DIR$/Stereo/test_1215_disp_resize/000156.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Stereo/test_1215_disp_resize/000157.png" afterPath="$PROJECT_DIR$/Stereo/test_1215_disp_resize/000157.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Stereo/test_1215_disp_resize/000158.png" afterPath="$PROJECT_DIR$/Stereo/test_1215_disp_resize/000158.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Stereo/test_1215_disp_resize/000159.png" afterPath="$PROJECT_DIR$/Stereo/test_1215_disp_resize/000159.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Stereo/test_1215_disp_resize/000160.png" afterPath="$PROJECT_DIR$/Stereo/test_1215_disp_resize/000160.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Stereo/test_1215_disp_resize/000161.png" afterPath="$PROJECT_DIR$/Stereo/test_1215_disp_resize/000161.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Stereo/test_1215_disp_resize/000162.png" afterPath="$PROJECT_DIR$/Stereo/test_1215_disp_resize/000162.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Stereo/test_1215_disp_resize/000163.png" afterPath="$PROJECT_DIR$/Stereo/test_1215_disp_resize/000163.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Stereo/test_1215_disp_resize/000164.png" afterPath="$PROJECT_DIR$/Stereo/test_1215_disp_resize/000164.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Stereo/test_1215_disp_resize/000165.png" afterPath="$PROJECT_DIR$/Stereo/test_1215_disp_resize/000165.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Stereo/test_1215_disp_resize/000166.png" afterPath="$PROJECT_DIR$/Stereo/test_1215_disp_resize/000166.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Stereo/test_1215_disp_resize/000167.png" afterPath="$PROJECT_DIR$/Stereo/test_1215_disp_resize/000167.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Stereo/test_1215_disp_resize/000168.png" afterPath="$PROJECT_DIR$/Stereo/test_1215_disp_resize/000168.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Stereo/test_1215_disp_resize/000169.png" afterPath="$PROJECT_DIR$/Stereo/test_1215_disp_resize/000169.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Stereo/test_1215_disp_resize/000170.png" afterPath="$PROJECT_DIR$/Stereo/test_1215_disp_resize/000170.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Stereo/test_1215_disp_resize/000171.png" afterPath="$PROJECT_DIR$/Stereo/test_1215_disp_resize/000171.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Stereo/test_1215_disp_resize/000172.png" afterPath="$PROJECT_DIR$/Stereo/test_1215_disp_resize/000172.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Stereo/test_1215_disp_resize/000173.png" afterPath="$PROJECT_DIR$/Stereo/test_1215_disp_resize/000173.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Stereo/test_1215_disp_resize/000174.png" afterPath="$PROJECT_DIR$/Stereo/test_1215_disp_resize/000174.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Stereo/test_1215_disp_resize/000175.png" afterPath="$PROJECT_DIR$/Stereo/test_1215_disp_resize/000175.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Stereo/test_1215_disp_resize/000176.png" afterPath="$PROJECT_DIR$/Stereo/test_1215_disp_resize/000176.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Stereo/test_1215_disp_resize/000177.png" afterPath="$PROJECT_DIR$/Stereo/test_1215_disp_resize/000177.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Stereo/test_1215_disp_resize/000178.png" afterPath="$PROJECT_DIR$/Stereo/test_1215_disp_resize/000178.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Stereo/test_1215_disp_resize/000179.png" afterPath="$PROJECT_DIR$/Stereo/test_1215_disp_resize/000179.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Stereo/test_1215_disp_resize/000180.png" afterPath="$PROJECT_DIR$/Stereo/test_1215_disp_resize/000180.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Stereo/test_1215_disp_resize/000181.png" afterPath="$PROJECT_DIR$/Stereo/test_1215_disp_resize/000181.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Stereo/test_1215_disp_resize/000182.png" afterPath="$PROJECT_DIR$/Stereo/test_1215_disp_resize/000182.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Stereo/test_1215_disp_resize/000183.png" afterPath="$PROJECT_DIR$/Stereo/test_1215_disp_resize/000183.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Stereo/test_1215_disp_resize/000184.png" afterPath="$PROJECT_DIR$/Stereo/test_1215_disp_resize/000184.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Stereo/test_1215_disp_resize/000185.png" afterPath="$PROJECT_DIR$/Stereo/test_1215_disp_resize/000185.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Stereo/test_1215_disp_resize/000186.png" afterPath="$PROJECT_DIR$/Stereo/test_1215_disp_resize/000186.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Stereo/test_1215_disp_resize/000187.png" afterPath="$PROJECT_DIR$/Stereo/test_1215_disp_resize/000187.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Stereo/test_1215_disp_resize/000188.png" afterPath="$PROJECT_DIR$/Stereo/test_1215_disp_resize/000188.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Stereo/test_1215_disp_resize/000189.png" afterPath="$PROJECT_DIR$/Stereo/test_1215_disp_resize/000189.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Stereo/test_1215_disp_resize/000190.png" afterPath="$PROJECT_DIR$/Stereo/test_1215_disp_resize/000190.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Stereo/test_1215_disp_resize/000191.png" afterPath="$PROJECT_DIR$/Stereo/test_1215_disp_resize/000191.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Stereo/test_1215_disp_resize/000192.png" afterPath="$PROJECT_DIR$/Stereo/test_1215_disp_resize/000192.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Stereo/test_1215_disp_resize/000193.png" afterPath="$PROJECT_DIR$/Stereo/test_1215_disp_resize/000193.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Stereo/test_1215_disp_resize/000194.png" afterPath="$PROJECT_DIR$/Stereo/test_1215_disp_resize/000194.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Stereo/test_1215_disp_resize/000195.png" afterPath="$PROJECT_DIR$/Stereo/test_1215_disp_resize/000195.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Stereo/test_1215_disp_resize/000196.png" afterPath="$PROJECT_DIR$/Stereo/test_1215_disp_resize/000196.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Stereo/test_1215_disp_resize/000197.png" afterPath="$PROJECT_DIR$/Stereo/test_1215_disp_resize/000197.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Stereo/test_1215_disp_resize/000198.png" afterPath="$PROJECT_DIR$/Stereo/test_1215_disp_resize/000198.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Stereo/test_1215_disp_resize/000199.png" afterPath="$PROJECT_DIR$/Stereo/test_1215_disp_resize/000199.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Stereo/test_1215_disp_resize/000200.png" afterPath="$PROJECT_DIR$/Stereo/test_1215_disp_resize/000200.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Stereo/test_1215_disp_resize/000201.png" afterPath="$PROJECT_DIR$/Stereo/test_1215_disp_resize/000201.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Stereo/test_1215_disp_resize/000202.png" afterPath="$PROJECT_DIR$/Stereo/test_1215_disp_resize/000202.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Stereo/test_1215_disp_resize/000203.png" afterPath="$PROJECT_DIR$/Stereo/test_1215_disp_resize/000203.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Stereo/test_1215_disp_resize/000204.png" afterPath="$PROJECT_DIR$/Stereo/test_1215_disp_resize/000204.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Stereo/test_1215_disp_resize/000205.png" afterPath="$PROJECT_DIR$/Stereo/test_1215_disp_resize/000205.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Stereo/test_1215_disp_resize/000206.png" afterPath="$PROJECT_DIR$/Stereo/test_1215_disp_resize/000206.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Stereo/test_1215_disp_resize/000207.png" afterPath="$PROJECT_DIR$/Stereo/test_1215_disp_resize/000207.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Stereo/test_1215_disp_resize/000208.png" afterPath="$PROJECT_DIR$/Stereo/test_1215_disp_resize/000208.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Stereo/test_1215_disp_resize/000209.png" afterPath="$PROJECT_DIR$/Stereo/test_1215_disp_resize/000209.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Stereo/test_1215_disp_resize/000210.png" afterPath="$PROJECT_DIR$/Stereo/test_1215_disp_resize/000210.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Stereo/test_1215_disp_resize/000211.png" afterPath="$PROJECT_DIR$/Stereo/test_1215_disp_resize/000211.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Stereo/test_1215_disp_resize/000212.png" afterPath="$PROJECT_DIR$/Stereo/test_1215_disp_resize/000212.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Stereo/test_1215_disp_resize/000213.png" afterPath="$PROJECT_DIR$/Stereo/test_1215_disp_resize/000213.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Stereo/test_1215_disp_resize/000214.png" afterPath="$PROJECT_DIR$/Stereo/test_1215_disp_resize/000214.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Stereo/test_1215_disp_resize/000215.png" afterPath="$PROJECT_DIR$/Stereo/test_1215_disp_resize/000215.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Stereo/test_1215_disp_resize/000216.png" afterPath="$PROJECT_DIR$/Stereo/test_1215_disp_resize/000216.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Stereo/test_1215_disp_resize/000217.png" afterPath="$PROJECT_DIR$/Stereo/test_1215_disp_resize/000217.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Stereo/test_1215_disp_resize/000218.png" afterPath="$PROJECT_DIR$/Stereo/test_1215_disp_resize/000218.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Stereo/test_1215_disp_resize/000219.png" afterPath="$PROJECT_DIR$/Stereo/test_1215_disp_resize/000219.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Stereo/test_1215_disp_resize/000220.png" afterPath="$PROJECT_DIR$/Stereo/test_1215_disp_resize/000220.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Stereo/test_1215_disp_resize/000221.png" afterPath="$PROJECT_DIR$/Stereo/test_1215_disp_resize/000221.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Stereo/test_1215_disp_resize/000222.png" afterPath="$PROJECT_DIR$/Stereo/test_1215_disp_resize/000222.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Stereo/test_1215_disp_resize/000223.png" afterPath="$PROJECT_DIR$/Stereo/test_1215_disp_resize/000223.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Stereo/test_1215_disp_resize/000224.png" afterPath="$PROJECT_DIR$/Stereo/test_1215_disp_resize/000224.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Stereo/test_1215_disp_resize/000225.png" afterPath="$PROJECT_DIR$/Stereo/test_1215_disp_resize/000225.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Stereo/test_1215_disp_resize/000226.png" afterPath="$PROJECT_DIR$/Stereo/test_1215_disp_resize/000226.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Stereo/test_1215_disp_resize/000227.png" afterPath="$PROJECT_DIR$/Stereo/test_1215_disp_resize/000227.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Stereo/test_1215_disp_resize/000228.png" afterPath="$PROJECT_DIR$/Stereo/test_1215_disp_resize/000228.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Stereo/test_1215_disp_resize/000229.png" afterPath="$PROJECT_DIR$/Stereo/test_1215_disp_resize/000229.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Stereo/test_1215_disp_resize/000230.png" afterPath="$PROJECT_DIR$/Stereo/test_1215_disp_resize/000230.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Stereo/test_1215_disp_resize/000231.png" afterPath="$PROJECT_DIR$/Stereo/test_1215_disp_resize/000231.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Stereo/test_1215_disp_resize/000232.png" afterPath="$PROJECT_DIR$/Stereo/test_1215_disp_resize/000232.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Stereo/test_1215_disp_resize/000233.png" afterPath="$PROJECT_DIR$/Stereo/test_1215_disp_resize/000233.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Stereo/test_1215_disp_resize/000234.png" afterPath="$PROJECT_DIR$/Stereo/test_1215_disp_resize/000234.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Stereo/test_1215_disp_resize/000235.png" afterPath="$PROJECT_DIR$/Stereo/test_1215_disp_resize/000235.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Stereo/test_1215_disp_resize/000236.png" afterPath="$PROJECT_DIR$/Stereo/test_1215_disp_resize/000236.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Stereo/test_1215_disp_resize/000237.png" afterPath="$PROJECT_DIR$/Stereo/test_1215_disp_resize/000237.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Stereo/test_1215_disp_resize/000238.png" afterPath="$PROJECT_DIR$/Stereo/test_1215_disp_resize/000238.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Stereo/test_1215_disp_resize/000239.png" afterPath="$PROJECT_DIR$/Stereo/test_1215_disp_resize/000239.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Stereo/test_1215_disp_resize/000240.png" afterPath="$PROJECT_DIR$/Stereo/test_1215_disp_resize/000240.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Stereo/test_1215_disp_resize/000241.png" afterPath="$PROJECT_DIR$/Stereo/test_1215_disp_resize/000241.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Stereo/test_1215_disp_resize/000242.png" afterPath="$PROJECT_DIR$/Stereo/test_1215_disp_resize/000242.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Stereo/test_1215_disp_resize/000243.png" afterPath="$PROJECT_DIR$/Stereo/test_1215_disp_resize/000243.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Stereo/test_1215_disp_resize/000244.png" afterPath="$PROJECT_DIR$/Stereo/test_1215_disp_resize/000244.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Stereo/test_1215_disp_resize/000245.png" afterPath="$PROJECT_DIR$/Stereo/test_1215_disp_resize/000245.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Stereo/test_1215_disp_resize/000246.png" afterPath="$PROJECT_DIR$/Stereo/test_1215_disp_resize/000246.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Stereo/test_1215_disp_resize/000247.png" afterPath="$PROJECT_DIR$/Stereo/test_1215_disp_resize/000247.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Stereo/test_1215_disp_resize/000248.png" afterPath="$PROJECT_DIR$/Stereo/test_1215_disp_resize/000248.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Stereo/test_1215_disp_resize/000249.png" afterPath="$PROJECT_DIR$/Stereo/test_1215_disp_resize/000249.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Stereo/test_1215_disp_resize/000250.png" afterPath="$PROJECT_DIR$/Stereo/test_1215_disp_resize/000250.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Stereo/test_1215_disp_resize/000251.png" afterPath="$PROJECT_DIR$/Stereo/test_1215_disp_resize/000251.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Stereo/test_1215_disp_resize/000252.png" afterPath="$PROJECT_DIR$/Stereo/test_1215_disp_resize/000252.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Stereo/test_1215_disp_resize/000253.png" afterPath="$PROJECT_DIR$/Stereo/test_1215_disp_resize/000253.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Stereo/test_1215_disp_resize/000254.png" afterPath="$PROJECT_DIR$/Stereo/test_1215_disp_resize/000254.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Stereo/test_1215_disp_resize/000255.png" afterPath="$PROJECT_DIR$/Stereo/test_1215_disp_resize/000255.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Stereo/test_1215_disp_resize/000256.png" afterPath="$PROJECT_DIR$/Stereo/test_1215_disp_resize/000256.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Stereo/test_1215_disp_resize/000257.png" afterPath="$PROJECT_DIR$/Stereo/test_1215_disp_resize/000257.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Stereo/test_1215_disp_resize/000258.png" afterPath="$PROJECT_DIR$/Stereo/test_1215_disp_resize/000258.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Stereo/test_1215_disp_resize/000259.png" afterPath="$PROJECT_DIR$/Stereo/test_1215_disp_resize/000259.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Stereo/test_1215_disp_resize/000260.png" afterPath="$PROJECT_DIR$/Stereo/test_1215_disp_resize/000260.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Stereo/test_1215_disp_resize/000261.png" afterPath="$PROJECT_DIR$/Stereo/test_1215_disp_resize/000261.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Stereo/test_1215_disp_resize/000262.png" afterPath="$PROJECT_DIR$/Stereo/test_1215_disp_resize/000262.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Stereo/test_1215_disp_resize/000263.png" afterPath="$PROJECT_DIR$/Stereo/test_1215_disp_resize/000263.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Stereo/test_1215_disp_resize/000264.png" afterPath="$PROJECT_DIR$/Stereo/test_1215_disp_resize/000264.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Stereo/test_1215_disp_resize/000265.png" afterPath="$PROJECT_DIR$/Stereo/test_1215_disp_resize/000265.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Stereo/test_1215_disp_resize/000266.png" afterPath="$PROJECT_DIR$/Stereo/test_1215_disp_resize/000266.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Stereo/test_1215_disp_resize/000267.png" afterPath="$PROJECT_DIR$/Stereo/test_1215_disp_resize/000267.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Stereo/test_1215_disp_resize/000268.png" afterPath="$PROJECT_DIR$/Stereo/test_1215_disp_resize/000268.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Stereo/test_1215_disp_resize/000269.png" afterPath="$PROJECT_DIR$/Stereo/test_1215_disp_resize/000269.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/GuorunTest.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/StereoDepthTest.py" afterPath="$PROJECT_DIR$/StereoDepthTest.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ceshi.py" afterPath="$PROJECT_DIR$/ceshi.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/monodepth/generate_train_list.py" afterPath="$PROJECT_DIR$/monodepth/generate_train_list.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/monodepth/train.txt" afterPath="$PROJECT_DIR$/monodepth/train.txt" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -308,6 +32,7 @@
     <SUITE FILE_PATH="coverage/Demo$disp_test.coverage" NAME="disp_test Coverage Results" MODIFIED="1514465908485" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/Demo$sz_demo2.coverage" NAME="sz_demo2 Coverage Results" MODIFIED="1507603582938" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/Demo$light.coverage" NAME="light Coverage Results" MODIFIED="1508250204190" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/Demo$GuorunTest.coverage" NAME="GuorunTest Coverage Results" MODIFIED="1515592765698" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/Demo$StereoTest.coverage" NAME="StereoTest Coverage Results" MODIFIED="1514445641318" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Stereo" />
     <SUITE FILE_PATH="coverage/Demo$ProcessData.coverage" NAME="ProcessData Coverage Results" MODIFIED="1507567495554" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
@@ -320,7 +45,7 @@
       <file leaf-file-name="ceshi.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/ceshi.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="220">
+            <state relative-caret-position="132">
               <caret line="10" column="24" lean-forward="false" selection-start-line="10" selection-start-column="24" selection-end-line="10" selection-end-column="24" />
               <folding>
                 <element signature="e#0#31#0" expanded="true" />
@@ -344,8 +69,8 @@
       <file leaf-file-name="StereoDepthTest.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/StereoDepthTest.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-895">
-              <caret line="11" column="25" lean-forward="false" selection-start-line="11" selection-start-column="25" selection-end-line="11" selection-end-column="25" />
+            <state relative-caret-position="2244">
+              <caret line="106" column="35" lean-forward="false" selection-start-line="106" selection-start-column="10" selection-end-line="106" selection-end-column="35" />
               <folding>
                 <element signature="e#0#31#0" expanded="true" />
               </folding>
@@ -353,44 +78,14 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="disp_test.py" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/disp_test.py">
+      <file leaf-file-name="GuorunTest.py" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/GuorunTest.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-1290">
-              <caret line="55" column="34" lean-forward="false" selection-start-line="55" selection-start-column="34" selection-end-line="55" selection-end-column="34" />
+            <state relative-caret-position="200">
+              <caret line="84" column="19" lean-forward="false" selection-start-line="84" selection-start-column="19" selection-end-line="84" selection-end-column="19" />
               <folding>
                 <element signature="e#0#31#0" expanded="true" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="r_0_out.log" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Stereo/r_0_out.log">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="286">
-              <caret line="959" column="0" lean-forward="false" selection-start-line="959" selection-start-column="0" selection-end-line="959" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="r_1_out.log" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Stereo/r_1_out.log">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-7">
-              <caret line="1355" column="0" lean-forward="false" selection-start-line="1355" selection-start-column="0" selection-end-line="1355" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="generate_train_list.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/monodepth/generate_train_list.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="418">
-              <caret line="19" column="18" lean-forward="false" selection-start-line="19" selection-start-column="18" selection-end-line="19" selection-end-column="18" />
-              <folding />
             </state>
           </provider>
         </entry>
@@ -448,8 +143,10 @@
         <option value="$PROJECT_DIR$/StereoDepthDemo.py" />
         <option value="$PROJECT_DIR$/monodepth/generate_train_list.py" />
         <option value="$PROJECT_DIR$/ceshi.py" />
-        <option value="$PROJECT_DIR$/StereoDepthTest.py" />
         <option value="$PROJECT_DIR$/disp_test.py" />
+        <option value="$PROJECT_DIR$/StereoDepthTest.py" />
+        <option value="$PROJECT_DIR$/ap.txt" />
+        <option value="$PROJECT_DIR$/GuorunTest.py" />
       </list>
     </option>
   </component>
@@ -493,8 +190,8 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scope" />
       <pane id="Scratches" />
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -527,26 +224,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.disp_test">
-    <configuration default="false" name="generate_train_list" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/monodepth" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <module name="Demo" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/monodepth/generate_train_list.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <method />
-    </configuration>
+  <component name="RunManager" selected="Python.GuorunTest">
     <configuration default="false" name="StereoTest" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -619,6 +297,25 @@
       <module name="Demo" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/disp_test.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <method />
+    </configuration>
+    <configuration default="false" name="GuorunTest" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="Demo" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/GuorunTest.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -856,19 +553,19 @@
       <item index="1" class="java.lang.String" itemvalue="Python.test" />
       <item index="2" class="java.lang.String" itemvalue="Python.sz_demo (1)" />
       <item index="3" class="java.lang.String" itemvalue="Python.sz_demo2_using_depth" />
-      <item index="4" class="java.lang.String" itemvalue="Python.generate_train_list" />
-      <item index="5" class="java.lang.String" itemvalue="Python.StereoTest" />
-      <item index="6" class="java.lang.String" itemvalue="Python.StereoDepthTest" />
-      <item index="7" class="java.lang.String" itemvalue="Python.ceshi" />
-      <item index="8" class="java.lang.String" itemvalue="Python.disp_test" />
+      <item index="4" class="java.lang.String" itemvalue="Python.StereoTest" />
+      <item index="5" class="java.lang.String" itemvalue="Python.StereoDepthTest" />
+      <item index="6" class="java.lang.String" itemvalue="Python.ceshi" />
+      <item index="7" class="java.lang.String" itemvalue="Python.disp_test" />
+      <item index="8" class="java.lang.String" itemvalue="Python.GuorunTest" />
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="Python.disp_test" />
-        <item index="1" class="java.lang.String" itemvalue="Python.StereoDepthTest" />
-        <item index="2" class="java.lang.String" itemvalue="Python.StereoTest" />
-        <item index="3" class="java.lang.String" itemvalue="Python.ceshi" />
-        <item index="4" class="java.lang.String" itemvalue="Python.generate_train_list" />
+        <item index="0" class="java.lang.String" itemvalue="Python.GuorunTest" />
+        <item index="1" class="java.lang.String" itemvalue="Python.disp_test" />
+        <item index="2" class="java.lang.String" itemvalue="Python.StereoDepthTest" />
+        <item index="3" class="java.lang.String" itemvalue="Python.StereoTest" />
+        <item index="4" class="java.lang.String" itemvalue="Python.ceshi" />
       </list>
     </recent_temporary>
   </component>
@@ -892,7 +589,7 @@
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.35990623" sideWeight="0.50555557" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.19109027" sideWeight="0.49444443" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.28370458" sideWeight="0.49444443" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -937,21 +634,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file:///System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/weakref.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="215">
-          <caret line="58" column="0" lean-forward="false" selection-start-line="58" selection-start-column="0" selection-end-line="58" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file:///System/Library/Frameworks/Python.framework/Versions/2.7/Extras/lib/python/matplotlib/gridspec.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2524">
-          <caret line="175" column="0" lean-forward="false" selection-start-line="175" selection-start-column="0" selection-end-line="175" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/CameraTrajectory.txt" />
     <entry file="file:///System/Library/Frameworks/Python.framework/Versions/2.7/Extras/lib/python/matplotlib/colors.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1023">
@@ -1137,6 +819,58 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/monodepth/generate_train_list.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="418">
+          <caret line="19" column="18" lean-forward="false" selection-start-line="19" selection-start-column="18" selection-end-line="19" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-2770">
+          <caret line="93" column="34" lean-forward="false" selection-start-line="93" selection-start-column="34" selection-end-line="93" selection-end-column="34" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test_proj.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2310">
+          <caret line="110" column="20" lean-forward="false" selection-start-line="110" selection-start-column="20" selection-end-line="110" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Stereo/r_0_out.log">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="21098">
+          <caret line="959" column="0" lean-forward="false" selection-start-line="959" selection-start-column="0" selection-end-line="959" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Stereo/r_1_out.log">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="29810">
+          <caret line="1355" column="0" lean-forward="false" selection-start-line="1355" selection-start-column="0" selection-end-line="1355" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/disp_test.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2838">
+          <caret line="133" column="15" lean-forward="false" selection-start-line="133" selection-start-column="15" selection-end-line="133" selection-end-column="15" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ceshi.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="132">
+          <caret line="10" column="24" lean-forward="false" selection-start-line="10" selection-start-column="24" selection-end-line="10" selection-end-column="24" />
+          <folding>
+            <element signature="e#0#31#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/monodepth_test.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1694">
@@ -1147,70 +881,35 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/monodepth/generate_train_list.py">
+    <entry file="file://$PROJECT_DIR$/disp/AP.txt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="418">
-          <caret line="19" column="18" lean-forward="false" selection-start-line="19" selection-start-column="18" selection-end-line="19" selection-end-column="18" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/test.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-2770">
-          <caret line="93" column="34" lean-forward="false" selection-start-line="93" selection-start-column="34" selection-end-line="93" selection-end-column="34" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/test_proj.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2310">
-          <caret line="110" column="20" lean-forward="false" selection-start-line="110" selection-start-column="20" selection-end-line="110" selection-end-column="20" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ceshi.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="220">
-          <caret line="10" column="24" lean-forward="false" selection-start-line="10" selection-start-column="24" selection-end-line="10" selection-end-column="24" />
-          <folding>
-            <element signature="e#0#31#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Stereo/r_0_out.log">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="286">
-          <caret line="959" column="0" lean-forward="false" selection-start-line="959" selection-start-column="0" selection-end-line="959" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Stereo/r_1_out.log">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-7">
-          <caret line="1355" column="0" lean-forward="false" selection-start-line="1355" selection-start-column="0" selection-end-line="1355" selection-end-column="0" />
-          <folding />
+        <state relative-caret-position="-420666">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/StereoDepthTest.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-895">
-          <caret line="11" column="25" lean-forward="false" selection-start-line="11" selection-start-column="25" selection-end-line="11" selection-end-column="25" />
+        <state relative-caret-position="2244">
+          <caret line="106" column="35" lean-forward="false" selection-start-line="106" selection-start-column="10" selection-end-line="106" selection-end-column="35" />
           <folding>
             <element signature="e#0#31#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/disp_test.py">
+    <entry file="file://$PROJECT_DIR$/ap.txt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1290">
-          <caret line="55" column="34" lean-forward="false" selection-start-line="55" selection-start-column="34" selection-end-line="55" selection-end-column="34" />
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/GuorunTest.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="200">
+          <caret line="84" column="19" lean-forward="false" selection-start-line="84" selection-start-column="19" selection-end-line="84" selection-end-column="19" />
           <folding>
             <element signature="e#0#31#0" expanded="true" />
           </folding>
